@@ -10,7 +10,16 @@ export const shuffleQuestions = <T>(array: T[]): T[] => {
 };
 
 export const flattenQuestions = (data: PracticeSet[]): Question[] => {
-  return data.flatMap(set => set.questions);
+  const allQuestions = data.flatMap(set => set.questions);
+  const uniqueQuestionsMap = new Map<string, Question>();
+  
+  for (const question of allQuestions) {
+    if (!uniqueQuestionsMap.has(question.text)) {
+      uniqueQuestionsMap.set(question.text, question);
+    }
+  }
+  
+  return Array.from(uniqueQuestionsMap.values());
 };
 
 export const generateExam = (allQuestions: Question[], size: number): Question[] => {
