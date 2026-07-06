@@ -1,4 +1,4 @@
-import type { Question, PracticeSet } from '../types';
+import type { Question, QuestionGroup } from '../types';
 
 export const shuffleQuestions = <T>(array: T[]): T[] => {
   const shuffled = [...array];
@@ -9,38 +9,20 @@ export const shuffleQuestions = <T>(array: T[]): T[] => {
   return shuffled;
 };
 
-export const flattenQuestions = (data: PracticeSet[]): Question[] => {
-  const allQuestions = data.flatMap(set => set.questions);
-  const uniqueQuestionsMap = new Map<string, Question>();
+export const flattenGroups = (groups: QuestionGroup[]): Question[] => {
+  const allQuestions = groups.flatMap(g => g.questions);
+  const uniqueMap = new Map<string, Question>();
   
-  for (const question of allQuestions) {
-    if (!uniqueQuestionsMap.has(question.text)) {
-      uniqueQuestionsMap.set(question.text, question);
+  for (const q of allQuestions) {
+    if (!uniqueMap.has(q.id)) {
+      uniqueMap.set(q.id, q);
     }
   }
   
-  return Array.from(uniqueQuestionsMap.values());
+  return Array.from(uniqueMap.values());
 };
 
-export const generateExam = (allQuestions: Question[], size: number): Question[] => {
-  return shuffleQuestions(allQuestions).slice(0, size);
-};
-
-/**
- * Filter questions by an array of selected categories.
- */
-export const filterByCategories = (allQuestions: Question[], categories: string[]): Question[] => {
-  return shuffleQuestions(allQuestions.filter(q => categories.includes(q.category)));
-};
-
-/**
- * Pure function to extract categories and their exact question counts.
- */
-export const getCategoryStats = (allQuestions: Question[]): Record<string, number> => {
-  return allQuestions.reduce((acc, q) => {
-    if (q.category) {
-      acc[q.category] = (acc[q.category] || 0) + 1;
-    }
-    return acc;
-  }, {} as Record<string, number>);
+export const filterBySections = (groups: QuestionGroup[], sections: string[]): Question[] => {
+  const filteredGroups = groups.filter(g => sections.includes(g.section));
+  return shuffleQuestions(flattenGroups(filteredGroups));
 };

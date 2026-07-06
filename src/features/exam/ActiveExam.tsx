@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate, Navigate } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, CheckCircle2, XCircle, Skull } from 'lucide-react';
+import { ArrowLeft, ArrowRight, CheckCircle2, XCircle } from 'lucide-react';
 import { useQuizStore } from '../../store/useQuizStore';
-import { flattenQuestions, generateExam, filterByCategories } from '../../core/services/quizService';
+import { filterBySections, shuffleQuestions } from '../../core/services/quizService';
 import { evaluateQuiz } from '../../core/services/scoringService';
 import rawData from '../../data/aws_questions.json';
-import type { Question, PracticeSet } from '../../core/types';
+import type { Question, QuizDatabase } from '../../core/types';
+
+interface ExamConfig {
+  type: 'session';
+  selections: {
+    easy: string[];
+    hard: string[];
+  };
+}
 
 const ActiveExam: React.FC = () => {
   const location = useLocation();
@@ -17,24 +25,19 @@ const ActiveExam: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<Record<string, number>>({});
   const [revealedQuestions, setRevealedQuestions] = useState<Set<string>>(new Set());
-  const [isSurvivalDead, setIsSurvivalDead] = useState(false);
   
-  // Updated config payload: category is now a string array
-  const config = location.state as { type: 'exam' | 'category'; size?: number; category?: string[]; isSurvival?: boolean } | null;
+  const config = location.state as ExamConfig | null;
 
   useEffect(() => {
     if (!config) return;
 
-    const allQuestions = flattenQuestions(rawData as PracticeSet[]);
-    let selectedQuestions: Question[] = [];
+    const db = rawData as QuizDatabase;
+    const easyQs = filterBySections(db.easy || [], config.selections.easy);
+    const hardQs = filterBySections(db.hard || [], config.selections.hard);
+    
+    const combinedQuestions = shuffleQuestions([...easyQs, ...hardQs]);
 
-    if (config.type === 'exam' && config.size) {
-      selectedQuestions = generateExam(allQuestions, config.size);
-    } else if (config.type === 'category' && config.category && config.category.length > 0) {
-      selectedQuestions = filterByCategories(allQuestions, config.category);
-    }
-
-    setQuestions(selectedQuestions);
+    setQuestions(combinedQuestions);
     setHasLoaded(true);
   }, [config]);
 
@@ -71,10 +74,6 @@ const ActiveExam: React.FC = () => {
   const handleConfirmAnswer = () => {
     if (!hasSelectedAnswer || isRevealed) return;
     setRevealedQuestions(prev => new Set(prev).add(currentQuestion.id));
-
-    if (config.isSurvival && userAnswers[currentQuestion.id] !== currentQuestion.correctAnswer) {
-      setIsSurvivalDead(true);
-    }
   };
 
   const handleNext = () => {
@@ -82,55 +81,39 @@ const ActiveExam: React.FC = () => {
   };
 
   const handlePrev = () => {
-    if (currentIndex > 0 && !config.isSurvival) setCurrentIndex(prev => prev - 1);
+    if (currentIndex > 0) setCurrentIndex(prev => prev - 1);
   };
 
   const handleSubmit = () => {
-    const activeQuestions = config.isSurvival ? questions.slice(0, currentIndex + 1) : questions;
-    const result = evaluateQuiz(activeQuestions, userAnswers);
+    const result = evaluateQuiz(questions, userAnswers);
     
-    // Pass the first category or "Mixed" as context for the history log
-    const categoryContext = config.category ? (config.category.length > 1 ? 'Mixed Domains' : config.category[0]) : undefined;
-    recordAttempt(result, config.type, categoryContext);
-    
-    navigate('/results', { state: { result, questions: activeQuestions, userAnswers }, replace: true });
-  };
+    const totalSelectedSecs = config.selections.easy.length + config.selections.hard.length;
+    const context = totalSelectedSecs > 1 
+      ? 'Mixed Domains' 
+      : (config.selections.easy[0] || config.selections.hard[0]);
 
-  // Determine the header label dynamically
-  const headerLabel = config.isSurvival 
-    ? 'Survival Mode' 
-    : config.type === 'exam' 
-      ? 'Practice Exam' 
-      : config.category && config.category.length === 1 
-        ? `${config.category[0]} Focus` 
-        : 'Targeted Domain Focus';
+    recordAttempt(result, config.type, context);
+    navigate('/results', { state: { result, questions, userAnswers }, replace: true });
+  };
 
   return (
     <div className="max-w-3xl mx-auto flex flex-col bg-slate-900 border border-slate-800 rounded-xl shadow-xl overflow-hidden min-h-[60vh]">
-      {/* Header & Progress */}
       <div className="bg-slate-950/50 border-b border-slate-800 p-4">
         <div className="flex justify-between items-center mb-3">
-          <span className={`text-xs font-bold uppercase tracking-wider ${config.isSurvival ? 'text-orange-500' : 'text-slate-400'}`}>
-            {headerLabel}
+          <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
+            Targeted Domain Focus
           </span>
-          <span className={`text-sm font-semibold ${config.isSurvival ? 'text-orange-400' : 'text-slate-300'}`}>
-            {config.isSurvival ? `Streak: ${currentIndex}` : `${currentIndex + 1} / ${questions.length}`}
+          <span className="text-sm font-semibold text-slate-300">
+            {currentIndex + 1} / {questions.length}
           </span>
         </div>
         <div className="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
-          <div 
-            className={`h-full transition-all duration-300 ease-out ${config.isSurvival ? 'bg-orange-500 shadow-[0_0_10px_rgba(249,115,22,0.5)]' : 'bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]'}`} 
-            style={{ width: `${progressPercentage}%` }}
-          />
+          <div className="h-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all duration-300 ease-out" style={{ width: `${progressPercentage}%` }} />
         </div>
       </div>
 
-      {/* Question Body */}
       <div className="p-6 md:p-8 flex-1 flex flex-col">
         <div className="mb-8">
-          <span className="inline-block px-2.5 py-1 bg-indigo-950/50 border border-indigo-900/50 text-indigo-400 text-[10px] font-bold rounded mb-4">
-            {currentQuestion.category}
-          </span>
           <h2 className="text-lg md:text-xl font-medium text-slate-100 leading-relaxed">
             {currentQuestion.text}
           </h2>
@@ -180,7 +163,6 @@ const ActiveExam: React.FC = () => {
           })}
         </div>
 
-        {/* Immediate Feedback Block */}
         {isRevealed && (
           <div className={`mt-8 p-5 rounded-xl border transition-all duration-500 animate-fadeIn ${
             isCorrect ? 'bg-emerald-950/20 border-emerald-900/40' : 'bg-red-950/20 border-red-900/40'
@@ -198,13 +180,12 @@ const ActiveExam: React.FC = () => {
         )}
       </div>
 
-      {/* Navigation Footer */}
       <div className="p-4 md:p-6 border-t border-slate-800 bg-slate-950/50 flex items-center justify-between mt-auto">
         <button
           onClick={handlePrev}
-          disabled={currentIndex === 0 || config.isSurvival}
+          disabled={currentIndex === 0}
           className={`flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors ${
-            (currentIndex === 0 || config.isSurvival) ? 'text-slate-700 opacity-50 cursor-not-allowed' : 'text-slate-400 hover:text-slate-200'
+            currentIndex === 0 ? 'text-slate-700 opacity-50 cursor-not-allowed' : 'text-slate-400 hover:text-slate-200'
           }`}
         >
           <ArrowLeft className="w-4 h-4" /> Previous
@@ -217,13 +198,6 @@ const ActiveExam: React.FC = () => {
             className="flex items-center gap-2 px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 disabled:bg-slate-800 disabled:text-slate-600 disabled:border-slate-700 disabled:cursor-not-allowed border border-indigo-500 text-white text-sm font-bold rounded-lg transition-all shadow-lg shadow-indigo-900/20"
           >
             Confirm Answer
-          </button>
-        ) : isSurvivalDead ? (
-          <button
-            onClick={handleSubmit}
-            className="flex items-center gap-2 px-6 py-2.5 bg-red-600 hover:bg-red-500 text-white text-sm font-bold rounded-lg shadow-lg shadow-red-900/20 transition-all animate-pulse"
-          >
-            Game Over <Skull className="w-4 h-4" />
           </button>
         ) : isLastQuestion ? (
           <button

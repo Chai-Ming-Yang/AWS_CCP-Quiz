@@ -1,16 +1,19 @@
 export interface Question {
   id: string;
-  category: string;
   text: string;
   options: string[];
   correctAnswer: number;
   explanation: string;
 }
 
-export interface PracticeSet {
-  id: string;
-  title: string;
+export interface QuestionGroup {
+  section: string;
   questions: Question[];
+}
+
+export interface QuizDatabase {
+  easy: QuestionGroup[];
+  hard: QuestionGroup[];
 }
 
 export interface QuizResult {
@@ -24,15 +27,14 @@ export interface AttemptHistory {
   date: string;
   score: number;
   total: number;
-  type: 'exam' | 'category';
-  categoryContext?: string;
+  type: 'session';
+  context?: string;
 }
 
 export interface QuizState {
   attempts: number;
   history: AttemptHistory[];
   wrongQuestions: string[];
-  categoryStats: Record<string, number>;
-  recordAttempt: (result: QuizResult, type: 'exam' | 'category', categoryContext?: string) => void;
+  recordAttempt: (result: QuizResult, type: 'session', context?: string) => void;
   clearHistory: () => void;
 }

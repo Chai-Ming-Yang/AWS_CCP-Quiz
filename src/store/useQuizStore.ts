@@ -8,18 +8,16 @@ export const useQuizStore = create<QuizState>()(
       attempts: 0,
       history: [],
       wrongQuestions: [],
-      categoryStats: {},
 
-      recordAttempt: (result: QuizResult, type: 'exam' | 'category', categoryContext?: string) => set((state: QuizState) => {
+      recordAttempt: (result: QuizResult, type: 'session', context?: string) => set((state: QuizState) => {
         const newHistoryEntry = {
           date: new Date().toISOString(),
           score: result.score,
           total: result.total,
           type,
-          categoryContext
+          context
         };
 
-        // Maintain unique wrong questions for review
         const updatedWrongQuestions = Array.from(
           new Set([...state.wrongQuestions, ...result.wrongQuestions])
         );
@@ -34,8 +32,7 @@ export const useQuizStore = create<QuizState>()(
       clearHistory: () => set({
         attempts: 0,
         history: [],
-        wrongQuestions: [],
-        categoryStats: {}
+        wrongQuestions: []
       })
     }),
     {
