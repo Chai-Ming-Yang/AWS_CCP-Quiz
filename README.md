@@ -1,73 +1,30 @@
-# React + TypeScript + Vite
+# AWS Certified Cloud Practitioner Quiz Engine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive, static exam simulation tool built to streamline your preparation for the AWS Certified Cloud Practitioner certification. 
 
-Currently, two official plugins are available:
+🚀 **Start practicing here:** [https://aws-ccp-quiz.vercel.app/](https://aws-ccp-quiz.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🎯 Core Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Customizable Sessions:** Select exact exam categories and domains across separate difficulties to build custom practice sets tailored to your weak points.
+* **Dynamic Layouts:** Questions and option order layouts are automatically randomized per attempt to prevent raw answer pattern memorization.
+* **Instant Verification:** Validate your answers choice-by-choice during practice sessions with detailed underlying explanations provided instantly on confirmation.
+* **Local Persistence Engine:** Keep track of your running preparation metrics. Your total practice history, overall score percentages, and wrong question logs are securely tracked completely inside your browser via local storage. No databases or logins required.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📊 Question Difficulties
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The database splits focus cleanly across two primary tracks:
+* **Easy Questions:** Straightforward, highly readable foundational definition checks. Excellent for standard vocabulary warming.
+* **Hard Questions:** Complex scenario-driven inquiries, core case studies, and advanced multi-select combinations pulled directly from corporate Knowledge Check (KC) banks.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ⚙️ Core Technical Architecture
+* **Frontend Framework:** React 19 + TypeScript + Vite
+* **Styling Engine:** Tailwind CSS v4
+* **State & Persistence:** Zustand State Engine with Local JSON LocalStorage Persistence 
+* **Deployment Target:** Vercel Static Hosting Platform
