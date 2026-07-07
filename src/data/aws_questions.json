@@ -6552,7 +6552,7 @@
         },
         {
           "id": "h_examprep_q20",
-          "text": "A FinTech bank has created a new credit card line; therefore, will need to expand its database to capture new customer profiles and link existing customer profiles to the new card line, while maintaining security and PCI compliance requirements. The bank is entirely in the cloud and provides their customer's with unique financial visualizations about their financial habits. Their customers use a mobile app and website for their account transactions and profiles.",
+          "text": "A FinTech bank has created a new credit card line; therefore, will need to expand its database to capture new customer profiles and link existing customer profiles to the new card line, while maintaining security and PCI compliance requirements. The bank is entirely in the cloud and provides their customer's with unique financial visualizations about their financial habits. Their customers use a mobile app and website for their account transactions and profiles.\nWhat rationale should be used for selecting Amazon DynamoDB as the database to support the mobile application? (Select THREE.)",
           "options": [
             "Provides single-digit latency",
             "Supports document and key-value store models",
@@ -6569,7 +6569,7 @@
         },
         {
           "id": "h_examprep_q21",
-          "text": "A FinTech bank has created a new credit card line; therefore, will need to expand its database to capture new customer profiles and link existing customer profiles to the new card line, while maintaining security and PCI compliance requirements. The bank is entirely in the cloud and provides their customer's with unique financial visualizations about their financial habits. Their customers use a mobile app and website for their account transactions and profiles.",
+          "text": "A FinTech bank has created a new credit card line; therefore, will need to expand its database to capture new customer profiles and link existing customer profiles to the new card line, while maintaining security and PCI compliance requirements. The bank is entirely in the cloud and provides their customer's with unique financial visualizations about their financial habits. Their customers use a mobile app and website for their account transactions and profiles.\nWhat Amazon DynamoDB attribute can store name-value pair collections that are enclosed in { }?",
           "options": [
             "List type",
             "Binary type",
@@ -6581,7 +6581,7 @@
         },
         {
           "id": "h_examprep_q22",
-          "text": "A FinTech bank has created a new credit card line; therefore, will need to expand its database to capture new customer profiles and link existing customer profiles to the new card line, while maintaining security and PCI compliance requirements. The bank is entirely in the cloud and provides their customer&#039;s with unique financial visualizations about their financial habits. Their customers use a mobile app and website for their account transactions and profiles.",
+          "text": "A FinTech bank has created a new credit card line; therefore, will need to expand its database to capture new customer profiles and link existing customer profiles to the new card line, while maintaining security and PCI compliance requirements. The bank is entirely in the cloud and provides their customer&#039;s with unique financial visualizations about their financial habits. Their customers use a mobile app and website for their account transactions and profiles. \nWhich database solution would be the most ideal and cost effective architectural choice for storing the customer's personal profile information indefinitely?",
           "options": [
             "Amazon Aurora",
             "Amazon Redshift",
@@ -6593,7 +6593,7 @@
         },
         {
           "id": "h_examprep_q23",
-          "text": "A FinTech bank has created a new credit card line; therefore, will need to expand its database to capture new customer profiles and link existing customer profiles to the new card line, while maintaining security and PCI compliance requirements. The bank is entirely in the cloud and provides their customer's with unique financial visualizations about their financial habits. Their customers use a mobile app and website for their account transactions and profiles.",
+          "text": "A FinTech bank has created a new credit card line; therefore, will need to expand its database to capture new customer profiles and link existing customer profiles to the new card line, while maintaining security and PCI compliance requirements. The bank is entirely in the cloud and provides their customer's with unique financial visualizations about their financial habits. Their customers use a mobile app and website for their account transactions and profiles. \nWhat database should be used to track the customer's monthly session data, which can provide insight into the mobile app features that customers use the most and thus help develop cost-effective enhancements for version updates?",
           "options": [
             "Amazon Aurora",
             "Amazon DynamoDB",
