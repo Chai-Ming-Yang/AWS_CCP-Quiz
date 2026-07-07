@@ -7066,7 +7066,7 @@
             "5,120 bytes"
           ],
           "explanation": "AWS Organizations enforces a strict maximum document storage constraint limit of exactly 5,120 bytes for every individual Service Control Policy (SCP) JSON file.",
-          "correctAnswer": 5
+          "correctAnswer": 3
         },
         {
           "id": "h_examprep_q57",
