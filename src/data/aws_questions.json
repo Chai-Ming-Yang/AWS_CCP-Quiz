@@ -6296,5 +6296,2340 @@
       ]
     }
   ],
-  "hard": []
+  "hard": [
+    {
+      "section": "Exam Prep",
+      "questions": [
+        {
+          "id": "h_examprep_q1",
+          "text": "A federal contractor located in Seattle is expanding their cloud presence to Germany, which has strict rules on data that originated in Germany leaving the region, known as data sovereignty. They know that they will have auditors auditing both regions. What selection criteria should be prioritized for this customer's expansion needs?",
+          "options": [
+            "Customer requirements",
+            "Proximity to customers",
+            "Services available within the Region",
+            "Data governance, legal requirements"
+          ],
+          "explanation": "Data sovereignty and regional privacy laws strictly dictate that data compliance and local legal requirements must take highest priority when planning regional cloud expansions.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q2",
+          "text": "A federal contractor located in Seattle is expanding their cloud presence to Germany, which has strict rules on data that originated in Germany leaving the region, known as data sovereignty. They know that they will have auditors auditing both regions. Which services would be considered global for this customer? (Select THREE.)",
+          "options": [
+            "Amazon Elastic Compute Cloud (Amazon EC2)",
+            "Amazon Cloud Front",
+            "Amazon Route 53",
+            "Amazon Machine Images (AMIs)",
+            "AWS Identity and Access Management (IAM)"
+          ],
+          "explanation": "AWS Identity and Access Management (IAM), Amazon Route 53 DNS, and Amazon CloudFront CDN operate globally across a single baseline configuration layout rather than bound to a specific Region.",
+          "correctAnswers": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "id": "h_examprep_q3",
+          "text": "A financial company is working with AWS for their new website. Administrators update images and related content on a monthly basis. They have noticed that the website's images take a while to load, especially for some of the global customers.",
+          "options": [
+            "Amazon CloudFront",
+            "Amazon Simple Storage Service (Amazon S3)",
+            "Amazon Elastic Compute Cloud (Amazon EC2)",
+            "Amazon Elastic Block Store (Amazon EBS)"
+          ],
+          "explanation": "Amazon CloudFront functions as a Content Delivery Network (CDN) that caches data globally at edge locations to minimize latency for international users.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q4",
+          "text": "A financial company is working with AWS for their new website. Administrators update images and related content on a monthly basis. They have noticed that the website's images take a while to load, especially for some of the global customers.",
+          "options": [
+            "Amazon Glacier",
+            "Amazon Simple Storage Service (Amazon S3)",
+            "Amazon CloudFront",
+            "Amazon Elastic Block Store (Amazon EBS)"
+          ],
+          "explanation": "Amazon S3 provides highly durable and scalable object storage ideal for hosting flat static assets like website imagery blocks.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q5",
+          "text": "A financial company is working with AWS for their new website. Administrators update images and related content on a monthly basis. They have noticed that the website's images take a while to load, especially for some of the global customers.",
+          "options": [
+            "Text",
+            "JavaScript Object Notation (JSON)",
+            "Command",
+            "Table"
+          ],
+          "explanation": "The AWS CLI supports multiple output presentation layouts including JSON, text, and structured ASCII tables.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q6",
+          "text": "A financial company is working with AWS for their new website. Administrators update images and related content on a monthly basis. They have noticed that the website's images take a while to load, especially for some of the global customers. Which AWS Command Line Interface (AWS CLI) command should the SysOps administrator use to check all the permissions that are needed to run the required action of the image archive before the action is executed?",
+          "options": [
+            "--output",
+            "--filter",
+            "--dry-run",
+            "--query"
+          ],
+          "explanation": "Appending the '--dry-run' option parameters checks whether you possess the necessary API query action permissions without actually running the execution command request.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q7",
+          "text": "A startup tech has just created a mobile app that allows a customer to place a lunch order for delivery with local restaurants through a third party courier. They want to provide the customer and the restaurant with a notification that the delivery has been completed, as the building is secure and all food orders are left in the lobby.",
+          "options": [
+            "Amazon Lightsail",
+            "Amazon Elastic Compute Cloud (Amazon EC2)",
+            "AWS Lambda",
+            "Amazon Simple Notification Service (Amazon SNS)",
+            "Amazon Machine Images (AMIs)"
+          ],
+          "explanation": "Amazon SNS provides pub/sub messaging capabilities to broadcast notifications, while serverless AWS Lambda triggers the delivery alert script handlers dynamically.",
+          "correctAnswers": [
+            2,
+            3
+          ]
+        },
+        {
+          "id": "h_examprep_q8",
+          "text": "A startup tech has just created a mobile app that allows a customer to place a lunch order for delivery with local restaurants through a third party courier. They want to provide the customer and the restaurant with a notification that the delivery has been completed, as the building is secure and all food orders are left in the lobby.",
+          "options": [
+            "127.255.255.255",
+            "169.254.255.255",
+            "169.254.169.254",
+            "100.127.255.255"
+          ],
+          "explanation": "The address 169.254.169.254 is the link-local endpoint used inside EC2 environments to query internal instance metadata parameters.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q9",
+          "text": "A SysOps engineer working at a local university has decided to launch Amazon Elastic Compute Cloud (Amazon EC2) instances to reduce their hardware footprint. They are new to AWS and will only need to launch in one region until their business grows. When does user data run when you provision an instance?",
+          "options": [
+            "Creation",
+            "Initialization",
+            "Deployment",
+            "Termination"
+          ],
+          "explanation": "EC2 user data bootstrap scripts execute exactly once during the initial instance initialization booting sequence layout.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q10",
+          "text": "A SysOps engineer working at a local university has decided to launch Amazon Elastic Compute Cloud (Amazon EC2) instances to reduce their hardware footprint. They are new to AWS and will only need to launch in one region until their business grows. What type of Amazon EC2 instance would be a best practice for selection?",
+          "options": [
+            "Reserved",
+            "Dedicated",
+            "Spot",
+            "On-Demand"
+          ],
+          "explanation": "On-Demand instances provide maximum flexibility without long-term payment commitments, making them best practice for standard testing and variable growth workloads.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q11",
+          "text": "A SysOps engineer working at a local university has decided to launch Amazon Elastic Compute Cloud (Amazon EC2) instances to reduce their hardware footprint. They are new to AWS and will only need to launch in one region until their business grows. What actions should the customer take if they would like new hardware to support the Amazon EC2 instance? (Select TWO.)",
+          "options": [
+            "Stop the instance",
+            "Terminate the instance",
+            "Start the instance",
+            "Reboot the instance",
+            "Create a new instance"
+          ],
+          "explanation": "Stopping and restarting an EC2 instance forces the virtual machine configuration layer to migrate cleanly onto a brand new physical hardware host.",
+          "correctAnswers": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": "h_examprep_q12",
+          "text": "A floral warehouse has just expanded delivery of wholesale flowers and plants to another region of the country and has experienced unexpected growth. They have an online ordering system that promises 48 hour delivery; therefore, they need quick notification of orders to the fulfillment center and a way to track their inventory more efficiently. As a consultant working with a floral warehouse customer that wants to enhance the infrastructure to support the growth, but needs to meet compliance requirements.",
+          "options": [
+            "Request tracing",
+            "Sticky sessions",
+            "WebSockets",
+            "Operational monitoring"
+          ],
+          "explanation": "WebSockets support persistent, low-latency, bidirectional real-time communication channels optimal for fast notification ordering tracking systems.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q13",
+          "text": "A floral warehouse has just expanded delivery of wholesale flowers and plants to another region of the country and has experienced unexpected growth. They have an online ordering system that promises 48 hour delivery; therefore, they need quick notification of orders to the fulfillment center and a way to track their inventory more efficiently. As a consultant working with a floral warehouse customer that wants to enhance the infrastructure to support the growth, but needs to meet compliance requirements.",
+          "options": [
+            "Active-active failover",
+            "Active-passive failover",
+            "Mixed failover configurations",
+            "Active-active-passive failover"
+          ],
+          "explanation": "An active-active failover routing architecture configuration distributes user traffic concurrently across multiple functional resources to minimize potential operational downtime hazards.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q14",
+          "text": "A floral warehouse has just expanded delivery of wholesale flowers and plants to another region of the country and has experienced unexpected growth. They have an online ordering system that promises 48 hour delivery; therefore, they need quick notification of orders to the fulfillment center and a way to track their inventory more efficiently. As a consultant working with a floral warehouse customer that wants to enhance the infrastructure to support the growth, but needs to meet compliance requirements.",
+          "options": [
+            "Routes traffic to the website based on the domain name that is entered.",
+            "Hosting for the website located in different Edge Locations.",
+            "Registers domain names.",
+            "Configures the best route for automatic scaling to a resource.",
+            "Completes health checks of the resource to ensure it can be reached."
+          ],
+          "explanation": "Amazon Route 53 acts as a DNS engine capable of registering domain names, executing automated endpoint health check scans, and routing users to valid destinations.",
+          "correctAnswers": [
+            0,
+            2,
+            4
+          ]
+        },
+        {
+          "id": "h_examprep_q15",
+          "text": "A floral warehouse has just expanded delivery of wholesale flowers and plants to another region of the country and has experienced unexpected growth. They have an online ordering system that promises 48 hour delivery; therefore, they need quick notification of orders to the fulfillment center and a way to track their inventory more efficiently. As a consultant working with a floral warehouse customer that wants to enhance the infrastructure to support the growth, but needs to meet compliance requirements.",
+          "options": [
+            "Amazon Simple Storage Service (Amazon S3)",
+            "Amazon ElastiCache",
+            "Amazon DynamoDB",
+            "Amazon Auto Scaling",
+            "Amazon Relational Database Service (Amazon RDS)"
+          ],
+          "explanation": "Combining Amazon DynamoDB and ElastiCache provides real-time transactional storage capacity alongside ultra-fast in-memory session acceleration properties.",
+          "correctAnswers": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "h_examprep_q16",
+          "text": "A trucking company is looking to track their fleet better and to ensure that they have updated information on the trucks each time they reach the office. Many of the trucks are out on the road for days at a time, but may be at the office for a break period that can last up to a day.",
+          "options": [
+            "On-premises",
+            "Serverless",
+            "Internet of Things (IoT)",
+            "Hybrid"
+          ],
+          "explanation": "Serverless architectures abstract underlying instance management burdens completely, dynamically processing variable workload event pipelines automatically.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q17",
+          "text": "A trucking company is looking to track their fleet better and to ensure that they have updated information on the trucks each time they reach the office. Many of the trucks are out on the road for days at a time, but may be at the office for a break period that can last up to a day.",
+          "options": [
+            "Reserved",
+            "Dedicated",
+            "Spot",
+            "On-Demand"
+          ],
+          "explanation": "Spot instances offer massive spare capacity discounts suited for fault-tolerant, flexible processing windows that can tolerate unexpected interruptions.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q18",
+          "text": "A trucking company is looking to track their fleet better and to ensure that they have updated information on the trucks each time they reach the office. Many of the trucks are out on the road for days at a time, but may be at the office for a break period that can last up to a day.",
+          "options": [
+            "Amazon Kinesis",
+            "Amazon Cognito",
+            "AWS Lambda",
+            "Amazon Redshift"
+          ],
+          "explanation": "Amazon Kinesis provides high-throughput streaming capabilities designed to capture and ingest real-time asset telemetry data parameters sequentially.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q19",
+          "text": "A trucking company is looking to track their fleet better and to ensure that they have updated information on the trucks each time they reach the office. Many of the trucks are out on the road for days at a time, but may be at the office for a break period that can last up to a day.",
+          "options": [
+            "Two",
+            "Four",
+            "Three",
+            "One"
+          ],
+          "explanation": "Architecting multi-AZ redundancy targets over at least two distinct physical Availability Zones satisfies core baseline cloud high-availability infrastructure targets.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q20",
+          "text": "A FinTech bank has created a new credit card line; therefore, will need to expand its database to capture new customer profiles and link existing customer profiles to the new card line, while maintaining security and PCI compliance requirements. The bank is entirely in the cloud and provides their customer's with unique financial visualizations about their financial habits. Their customers use a mobile app and website for their account transactions and profiles.",
+          "options": [
+            "Provides single-digit latency",
+            "Supports document and key-value store models",
+            "Ensures read replicas are highly available",
+            "Utilizes unordered collections of name-value pairs",
+            "Support for Business Intelligence(BI) tools"
+          ],
+          "explanation": "Amazon DynamoDB uses unstructured key-value schemas to provide single-digit millisecond scale execution speeds for massive volumes of concurrent users.",
+          "correctAnswers": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "h_examprep_q21",
+          "text": "A FinTech bank has created a new credit card line; therefore, will need to expand its database to capture new customer profiles and link existing customer profiles to the new card line, while maintaining security and PCI compliance requirements. The bank is entirely in the cloud and provides their customer's with unique financial visualizations about their financial habits. Their customers use a mobile app and website for their account transactions and profiles.",
+          "options": [
+            "List type",
+            "Binary type",
+            "Metadata tags",
+            "Map type"
+          ],
+          "explanation": "DynamoDB tables map complex internal configurations together smoothly by nested structural Map type attributes containing custom key-value pairs.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q22",
+          "text": "A FinTech bank has created a new credit card line; therefore, will need to expand its database to capture new customer profiles and link existing customer profiles to the new card line, while maintaining security and PCI compliance requirements. The bank is entirely in the cloud and provides their customer&#039;s with unique financial visualizations about their financial habits. Their customers use a mobile app and website for their account transactions and profiles.",
+          "options": [
+            "Amazon Aurora",
+            "Amazon Redshift",
+            "Amazon DynamoDB",
+            "Amazon ElastiCache"
+          ],
+          "explanation": "DynamoDB is a cloud-native NoSQL database built for extreme low-latency performance and horizontal throughput scale requirements.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q23",
+          "text": "A FinTech bank has created a new credit card line; therefore, will need to expand its database to capture new customer profiles and link existing customer profiles to the new card line, while maintaining security and PCI compliance requirements. The bank is entirely in the cloud and provides their customer's with unique financial visualizations about their financial habits. Their customers use a mobile app and website for their account transactions and profiles.",
+          "options": [
+            "Amazon Aurora",
+            "Amazon DynamoDB",
+            "Amazon Neptune",
+            "Amazon ElastiCache"
+          ],
+          "explanation": "DynamoDB features automated out-of-the-box PCI data security standards alignment, satisfying banking compliance profiles perfectly.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q24",
+          "text": "The automotive industry is now developing a specific unmanned ground vehicle (UGV) to be used by the military that provides alerts to the operator of hazardous conditions, loss of connection, or vehicle damage. They know they will need to align with the National Institute of Standards and Technology (NIST) guidelines 800-171 regarding the vehicle's security strength to protect its location at all times. The application used by each UGV will be hosted in its own virtual private cloud (VPC) and run in a private subnet.",
+          "options": [
+            "AWS Direct Connect",
+            "VPC peering",
+            "Dedicated Hosts",
+            "Internet gateway"
+          ],
+          "explanation": "VPC Peering enables direct, secure network routing links across independent virtual private networks without routing traffic over the public internet.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q25",
+          "text": "The automotive industry is now developing a specific unmanned ground vehicle (UGV) to be used by the military that provides alerts to the operator of hazardous conditions, loss of connection, or vehicle damage. They know they will need to align with the National Institute of Standards and Technology (NIST) guidelines 800-171 regarding the vehicle&#039;s security strength to protect its location at all times. The application used by each UGV will be hosted in its own virtual private cloud (VPC) and run in a private subnet.",
+          "options": [
+            "Ensure the correct key pair is being used for data encryption and decryption with Secure Sockets Layer (SSL).",
+            "Validate the security group permissions to the service ports, and the source/destination IP addresses.",
+            "Confirm the network access control lists (network ACLs) provide access to the IP protocols and service ports.",
+            "Review the Amazon CloudWatch log to determine if edge locations are no longer caching the data.",
+            "Determine if the direct connection to the endpoint is causing additional delays."
+          ],
+          "explanation": "Troubleshooting private network isolation blockages mandates validating granular security group parameters alongside stateful NACL subnet ingress rule combinations.",
+          "correctAnswers": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "h_examprep_q26",
+          "text": "The automotive industry is now developing a specific unmanned ground vehicle (UGV) to be used by the military that provides alerts to the operator of hazardous conditions, loss of connection, or vehicle damage. They know they will need to align with the National Institute of Standards and Technology (NIST) guidelines 800-171 regarding the vehicle&#039;s security strength to protect its location at all times. The application used by each UGV will be hosted in its own virtual private cloud (VPC) and run in a private subnet.",
+          "options": [
+            "AWS VPN CloudHub",
+            "NAT instance",
+            "Interface VPC endpoint",
+            "Gateway VPC endpoint"
+          ],
+          "explanation": "An Interface VPC Endpoint establishes private AWS PrivateLink network interface cards inside your subnet to interact securely with AWS APIs without using an Internet Gateway.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q27",
+          "text": "The local power company has recently installed a new power grid within the community. They are working with the local government to acquire funding for a second power grid, but must show data that shows the cost reductions and how that translates to increased consumption time windows. This data needs to be kept for a minimum of 10 years in case of audit or by inquiry of a government agency. The power company wants to engage the community and gain their support, as their individual and communal power consumption is reflected in the data.",
+          "options": [
+            "Amazon Simple Storage Service (Amazon S3)",
+            "Amazon S3 STANDARD Infrequent Access (IA)",
+            "Amazon Elastic Block Store (Amazon EBS)",
+            "Amazon Glacier"
+          ],
+          "explanation": "Amazon S3 Standard-IA provides discounted archive storage costs for long-term records accessed infrequently but requiring rapid access upon request.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q28",
+          "text": "The local power company has recently installed a new power grid within the community. They are working with the local government to acquire funding for a second power grid, but must show data that shows the cost reductions and how that translates to increased consumption time windows. This data needs to be kept for a minimum of 10 years in case of audit or by inquiry of a government agency. The power company wants to engage the community and gain their support, as their individual and communal power consumption is reflected in the data.",
+          "options": [
+            "Amazon EC2 Auto Scaling has not been enabled",
+            "Elastic Load Balancing (ELB) has not been enabled",
+            "Versioning has been enabled",
+            "Cross-origin resource sharing (CORS) configuration has not been enabled"
+          ],
+          "explanation": "Enabling S3 bucket object versioning preserves original historical file variations against accidental overwrite commands or deletions.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q29",
+          "text": "The local power company has recently installed a new power grid within the community. They are working with the local government to acquire funding for a second power grid, but must show data that shows the cost reductions and how that translates to increased consumption time windows. This data needs to be kept for a minimum of 10 years in case of audit or by inquiry of a government agency. The power company wants to engage the community and gain their support, as their individual and communal power consumption is reflected in the data.",
+          "options": [
+            "Reconnect the gateway",
+            "Delete the disk from the gateway",
+            "Create a new gateway",
+            "Mount the cache disks to an ephemeral drive"
+          ],
+          "explanation": "Resolving disconnected local storage volume states requires restarting or reconnecting the primary storage gateway channel framework links.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q30",
+          "text": "A local hospital is preparing for an audit and needs to show that they are in compliance with HIPAA requirements. This includes security, data lifecycle management, and compliance. They have experienced problems in the past with an employee that has accessed patient records that were not relevant to their immediate job tasks. The CEO of the hospital wants to ensure that mitigation to this issue has been resolved and has had the SysOps team employ various AWS monitoring and security services.",
+          "options": [
+            "Maximum tags per group is 20",
+            "Tag key length between 1 – 128 Unicode characters",
+            "Tag keys can start with aws:",
+            "Keys and values are case-sensitive in a tag",
+            "Tag value length maximum of 256 Unicode characters"
+          ],
+          "explanation": "AWS tracking tags enforce case-sensitive evaluation constraints and accommodate key lengths between 1 and 128 Unicode characters up to a limit of 256 for value strings.",
+          "correctAnswers": [
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "id": "h_examprep_q31",
+          "text": "A local hospital is preparing for an audit and needs to show that they are in compliance with HIPAA requirements. This includes security, data lifecycle management, and compliance. They have experienced problems in the past with an employee that has accessed patient records that were not relevant to their immediate job tasks. The CEO of the hospital wants to ensure that mitigation to this issue has been resolved and has had the SysOps team employ various AWS monitoring and security services.",
+          "options": [
+            ".log",
+            ".gz",
+            ".aws",
+            ".png"
+          ],
+          "explanation": "AWS CloudTrail stores automated JSON audit history tracks inside compressed GNU zip (.gz) format files to minimize storage costs.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q32",
+          "text": "A local hospital is preparing for an audit and needs to show that they are in compliance with HIPAA requirements. This includes security, data lifecycle management, and compliance. They have experienced problems in the past with an employee that has accessed patient records that were not relevant to their immediate job tasks. The CEO of the hospital wants to ensure that mitigation to this issue has been resolved and has had the SysOps team employ various AWS monitoring and security services.",
+          "options": [
+            "Integrate AWS Config and AWS Organizations through an application programming interface (API)",
+            "Enable AWS Config in the source account",
+            "Enable all features in AWS Organizations",
+            "Select or create a valid IAM role"
+          ],
+          "explanation": "Deploying governance tracking with AWS Config dictates provisioning an IAM execution service role to grant the logging framework inspection privileges.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q33",
+          "text": "A local hospital is preparing for an audit and needs to show that they are in compliance with HIPAA requirements. This includes security, data lifecycle management, and compliance. They have experienced problems in the past with an employee that has accessed patient records that were not relevant to their immediate job tasks. The CEO of the hospital wants to ensure that mitigation to this issue has been resolved and has had the SysOps team employ various AWS monitoring and security services.",
+          "options": [
+            "DiskReadBytes",
+            "DiskWriteBytes",
+            "DiskReadOps",
+            "DiskWriteOps"
+          ],
+          "explanation": "The 'DiskWriteBytes' metric inside CloudWatch monitors real-time block-level disk data modification throughput to isolate bottlenecks.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q34",
+          "text": "A local hospital is preparing for an audit and needs to show that they are in compliance with HIPAA requirements. This includes security, data lifecycle management, and compliance. They have experienced problems in the past with an employee that has accessed patient records that were not relevant to their immediate job tasks. The CEO of the hospital wants to ensure that mitigation to this issue has been resolved and has had the SysOps team employ various AWS monitoring and security services.",
+          "options": [
+            "ListMetrics",
+            "DescribeAlarms",
+            "Metric Data",
+            "Period",
+            "Actions"
+          ],
+          "explanation": "The CloudWatch API relies on 'ListMetrics' commands to display active options and 'DescribeAlarms' calls to query trigger parameters.",
+          "correctAnswers": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "h_examprep_q35",
+          "text": "A local hospital is preparing for an audit and needs to show that they are in compliance with HIPAA requirements. This includes security, data life cycle management, and compliance. They have experienced problems in the past with an employee that has accessed patient records that were not relevant to their immediate job tasks. The CEO of the hospital wants to ensure that mitigation to this issue has been resolved and has had the SysOps team employ various AWS monitoring and security services.",
+          "options": [
+            "Resource access",
+            "Hardware and software at or below the hypervisor level",
+            "Customer-stored data",
+            "Network logins",
+            "Patch management at the infrastructure level"
+          ],
+          "explanation": "Under the shared responsibility model, the customer governs granular resource privileges, database access rules, and network authentication configurations.",
+          "correctAnswers": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "id": "h_examprep_q36",
+          "text": "A non-profit organization has multiple committees that have individual accounts. They are looking at ways to reduce cost, yet ensure that expenses are best utilized across the committees and are finding that individual accounts are no longer working. Since they receive donations, they want to ensure that they can provide use and expense details to their donors when requested.",
+          "options": [
+            "Double check that the CFO has valid credentials.",
+            "Instruct the CFO to log out and sign in again by using root credentials to make the request.",
+            "Validate that the CFO has correctly signed their request.",
+            "Ensure that the proper wait period has been completed, and then have the CFO repeat the request.",
+            "Verify that the CFO has the permissions to call the action and the requested resource."
+          ],
+          "explanation": "Resolving rejected programmatic request issues requires ensuring authorization signatures match perfectly and validating access policy permissions.",
+          "correctAnswers": [
+            2,
+            4
+          ]
+        },
+        {
+          "id": "h_examprep_q37",
+          "text": "A non-profit organization has multiple committees that have individual accounts. They are looking at ways to reduce cost, yet ensure that expenses are best utilized across the committees and are finding that individual accounts are no longer working. Since they receive donations, they want to ensure that they can provide use and expense details to their donors when requested.",
+          "options": [
+            "iam:ResourceTag/key-name",
+            "aws:PrincipalTag/key-name",
+            "aws:RequestTag/key-name",
+            "aws:TagKeys"
+          ],
+          "explanation": "The 'aws:PrincipalTag' context element evaluates tags bound to the executing IAM user or role to enforce attribute-based access control (ABAC) rules.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q38",
+          "text": "A non-profit organization has multiple committees that have individual accounts. They are looking at ways to reduce cost, yet ensure that expenses are best utilized across the committees and are finding that individual accounts are no longer working. Since they receive donations, they want to ensure that they can provide use and expense details to their donors when requested.",
+          "options": [
+            "A service the will allow for SSL/TLS certificates to be provisioned, managed, and deployed with other cloud- based AWS services.",
+            "A firewall that protects web applications from attacks. These protection are based on rules that are configured on defined conditions.",
+            "A service the that provides automated security assessments to ultimately improve the security and compliance of an application that is deployed on AWS.",
+            "A customer support service that provides cloud performance monitoring and security."
+          ],
+          "explanation": "AWS Support plans provide access to comprehensive cloud monitoring infrastructure, trusted advice, and dedicated architectural guidance.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q39",
+          "text": "A non-profit organization has multiple committees that have individual accounts. They are looking at ways to reduce cost, yet ensure that expenses are best utilized across the committees and are finding that individual accounts are no longer working. Since they receive donations, they want to ensure that they can provide use and expense details to their donors when requested.",
+          "options": [
+            "Organize resources by group",
+            "Ability to allocate costs to a user",
+            "Limit Amazon Elastic Compute Cloud (Amazon EC2) application programming interface (API) calls to only development environments",
+            "Run automated start/stop scripts during business hours only"
+          ],
+          "explanation": "Attaching structural tags to cloud resources lets you filter usage records to accurately assign costs to specific development teams or business units.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q40",
+          "text": "A non-profit organization has multiple committees that have individual accounts. They are looking at ways to reduce cost, yet ensure that expenses are best utilized across the committees and are finding that individual accounts are no longer working. Since they receive donations, they want to ensure that they can provide use and expense details to their donors when requested.",
+          "options": [
+            "Confidentiality",
+            "Date/Time",
+            "Version",
+            "Opt in/Opt out",
+            "Cost Center/Business Unit"
+          ],
+          "explanation": "Tagging parameters typically map objects according to their relative financial boundaries or Cost Center allocations.",
+          "correctAnswers": [
+            1,
+            3
+          ]
+        },
+        {
+          "id": "h_examprep_q41",
+          "text": "A global travel company has announced a company restructure in order to re-invest profits into customer facing technology. The IT budget has been re-allocated by 20% for the upcoming year; therefore} staff will be forced to make standardizations and efficiencies with the new budget until the new technology generates increased profits. The travel company is planning to deploy a new phone app so customers can book travel. This app will store a lot of personal data about their customers so the customers can book their travel more quickly, including their names, addresses, credit card information, passport numbers, and other details. A challenge is that a hacker could obtain this data or even appear at the customer's home while the customer is on travel.",
+          "options": [
+            "Application access via edge locations and Amazon CloudFront caches is supposed by automatic scaling for capacity needs\" (or something similar",
+            "Automation of secure deployments with AWS CloudFormation and AWS Config",
+            "Data encryption when in transit with Transport Layer Security (TLS) and at rest with AWS Key Management Service (AWS KMS)",
+            "Permission policies for all types of testing, which is obtained through root credentials and use of access controls",
+            "Network firewalls built into Amazon Virtual Private Cloud (Amazon VPC) with the use of Amazon GuardDuty"
+          ],
+          "explanation": "Securing sensitive user files requires using Transport Layer Security (TLS) for transit encryption alongside AWS KMS for managed rest encryption.",
+          "correctAnswers": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "id": "h_examprep_q42",
+          "text": "A global travel company has announced a company restructure in order to re-invest profits into customer facing technology. The IT budget has been re-allocated by 20% for the upcoming year; therefore, staff will be forced to make standardizations and efficiencies with the new budget until the new technology generates increased profits. The Cloud Engineer is planning his AWS CloudFormation templates to support the upcoming deployment of the travel company's new phone app.",
+          "options": [
+            "40",
+            "100",
+            "80",
+            "200"
+          ],
+          "explanation": "AWS CloudFormation enforces a strict structural template resource limitation barrier cap of exactly 200 resource allocations per stack template.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q43",
+          "text": "A global travel company has announced a company restructure in order to re-invest profits into customer facing technology. The IT budget has been re-allocated by 20% for the upcoming year; therefore, staff will be forced to make standardizations and efficiencies with the new budget until the new technology generates increased profits.",
+          "options": [
+            "An IAM Role Policy that acts as a Service Role",
+            "The resources that will use the role; also, a policy dependency must be added",
+            "A template that defines a service role without any dependencies",
+            "An IAM Role Policy that acts as a Resource Role"
+          ],
+          "explanation": "To instantiate resources requiring special credentials, a template configuration must explicitly define an IAM Service Role along with its required execution policies.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q44",
+          "text": "A global travel company has announced a company restructure in order to re-invest profits into customer facing technology. The IT budget has been re-allocated by 20% for the upcoming year; therefore, staff will be forced to make standardizations and efficiencies with the new budget until the new technology generates increased profits.",
+          "options": [
+            "Cross-stack references cannot be created across Regions.",
+            "Values can be imported from any Region that it has been exported previously.",
+            "Names must be unique within a Region.",
+            "An output value can be modified or removed even if it references another stack in one of its outputs.",
+            "A stack cannot be deleted if it references another stack in one of its outputs."
+          ],
+          "explanation": "CloudFormation cross-stack exports are localized to their specific Region, require globally unique names within that Region, and prevent parent stack deletions if dynamic references exist.",
+          "correctAnswers": [
+            0,
+            2,
+            4
+          ]
+        },
+        {
+          "id": "h_examprep_q45",
+          "text": "A global travel company has announced a company restructure in order to re-invest profits into customer facing technology. The IT budget has been re-allocated by 20% for the upcoming year; therefore, staff will be forced to make standardizations and efficiencies with the new budget until the new technology generates increased profits.",
+          "options": [
+            "Resources",
+            "Conditions",
+            "Metadata",
+            "Outputs"
+          ],
+          "explanation": "The template Metadata block lets you supply non-functional properties, ordering constraints, or visual parameters without altering functional cloud configurations.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q46",
+          "text": "A global travel company has announced a company restructure in order to re-invest profits into customer facing technology: The IT budget has been re-allocated by 20% for the upcoming year; therefore, staff will be forced to make standardizations and efficiencies with the new budget until the new technology generates increased profits.",
+          "options": [
+            "Reuse templates to build stacks for different environments",
+            "Ensure there are no dependencies between layers",
+            "Plan and organize stacks before creating them",
+            "Organize resources in the same stack based on their ownership and lifecycles",
+            "Disperse resources across multiple stacks based on their tags"
+          ],
+          "explanation": "Best practices for infrastructure-as-code state you should reuse modular templates, map stacks according to shared lifecycles, and plan component links prior to provisioning.",
+          "correctAnswers": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "id": "h_examprep_q47",
+          "text": "A global travel company has announced a company restructure in order to re-invest profits into customer facing technology. The IT budget has been re-allocated by 20% for the upcoming year; therefore, staff will be forced to make standardizations and efficiencies with the new budget until the new technology generates increased profits.",
+          "options": [
+            "Request a limit increase",
+            "Launch a different type of instance",
+            "Create the instance again",
+            "Delete excess instances",
+            "Place the instance in another account"
+          ],
+          "explanation": "Resolving an 'InstanceLimitExceeded' runtime error requires deleting idle virtual assets or submitting a quota increase request to AWS.",
+          "correctAnswers": [
+            0,
+            3
+          ]
+        },
+        {
+          "id": "h_examprep_q48",
+          "text": "A global travel company has announced a company restructure in order to re-invest profits into customer facing technology. The IT budget has been re-allocated by 20% for the upcoming year; therefore, staff will be forced to make standardizations and efficiencies with the new budget until the new technology generates increased profits.",
+          "options": [
+            "The stack should be recoverable with modifications in AWS CloudFormation",
+            "There will be no impact to the stack or the respective templates",
+            "The stack's templates will need to be re-configured",
+            "The stack might be in an unrecoverable state"
+          ],
+          "explanation": "Manually modifying underlying resources outside of CloudFormation orchestrations triggers configuration drift, which can lock the stack into an unrecoverable state.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q49",
+          "text": "A startup tech has just created a mobile app that allows a customer to place a lunch order for delivery with local restaurants through a third party courier. They want to provide the customer and the restaurant with a notification that the delivery has been completed, as the building is secure and all food orders are left in the lobby.",
+          "options": [
+            "Take a snapshot of the Amazon Elastic Block Store (Amazon EBS) volume.",
+            "Change the setting of the Amazon Elastic Block Store (Amazon EBS)volume so that it scales.",
+            "Create a new Amazon Elastic Block Store (Amazon EBS) volume.",
+            "Make a soft limit request with AWS.",
+            "Delete the old volume."
+          ],
+          "explanation": "Modifying or expanding attached block storage configurations requires generating an EBS volume snapshot, instantiating a new volume tier, and removing outmoded components.",
+          "correctAnswers": [
+            0,
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Case Study",
+      "questions": [
+        {
+          "id": "h_examprep_q50",
+          "text": "A federal contractor located in Seattle is expanding their cloud presence to Germany, which has strict rules on data that originated in Germany leaving the region, known as data sovereignty. They know that they will have auditors auditing both regions. How should access be provided to auditors?",
+          "options": [
+            "Identity federation",
+            "IAM Role",
+            "IAM User",
+            "Root account"
+          ],
+          "explanation": "An IAM Role provides secure cross-region third-party audit access using short-lived temporary security credentials, satisfying strict data sovereignty regulations without creating permanent IAM Users.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q51",
+          "text": "A SysOps engineer working at a local university has decided to launch Amazon Elastic Compute Cloud (Amazon EC2) instances to reduce their hardware footprint. They are new to AWS and will only need to launch in one region until their business grows. What is the first step when you launch an Amazon EC2 instance?",
+          "options": [
+            "Launch access and control permissions.",
+            "Select instance type and size.",
+            "Determine the Amazon Machine Image (AMI) that will be used.",
+            "Provide configuration details."
+          ],
+          "explanation": "The initial step when launching an EC2 instance is selecting an Amazon Machine Image (AMI) template to define the core base operating system and software architecture stack.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q52",
+          "text": "A trucking company is looking to track their fleet better and to ensure that they have updated information on the trucks each time they reach the office. Many of the trucks are out on the road for days at a time, but may be at the office for a break period that can last up to a day.",
+          "options": [
+            "Desire to manage the resources and their respective policies, and oversee security.",
+            "Have a requirement for portability and maintaining a status of vendor-agnosticism.",
+            "Move software from one environment to another through isolation.",
+            "Ensure that the Cloud Service Provider provisions the infrastructure and manages capacity."
+          ],
+          "explanation": "Adopting container technologies provides applications with extreme environmental portability, environment isolation, and precise underlying resource management.",
+          "correctAnswers": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "h_examprep_q53",
+          "text": "A FinTech bank has created a new credit card line; therefore, will need to expand its database to capture new customer profiles and link existing customer profiles to the new card line, while maintaining security and PCI compliance requirements. The bank is entirely in the cloud and provides their customer's with unique financial visualizations about their financial habits. Their customers use a mobile app and website for their account transactions and profiles.",
+          "options": [
+            "Amazon ElastiCache",
+            "Amazon DynamoDB",
+            "Amazon Aurora",
+            "Amazon Neptune"
+          ],
+          "explanation": "Amazon Neptune is a fully managed, PCI-compliant graph database optimized for tracking complex data interconnections, such as mapping financial profiles across multiple lines of credit.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q54",
+          "text": "The automotive industry is now developing a specific unmanned ground vehicle (UGV) to be used by the military that provides alerts to the operator of hazardous conditions, loss of connection, or vehicle damage. They know they will need to align with the National Institute of Standards and Technology (NIST) guidelines 800-171 regarding the vehicle's security strength to protect its location at all times. The application used by the UGV will be hosted in a private subnet.",
+          "options": [
+            "Specify a public subnet for creation",
+            "Update the route table",
+            "Provide access through relevant security groups",
+            "Specify an Elastic IP address for association",
+            "Implement redundancy in different Availability Zones"
+          ],
+          "explanation": "To allow private instances to contact external services securely, you must instantiate a public subnet containing a NAT Gateway, update target route tables, and associate Elastic IPs for translation.",
+          "correctAnswers": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "h_examprep_q55",
+          "text": "A local hospital is preparing for an audit and needs to show that they are in compliance with HIPAA requirements. This includes security, data lifecycle management, and compliance. They have experienced problems in the past with an employee that has accessed patient records that were not relevant to their immediate job tasks. The CEO of the hospital wants to ensure that mitigation to this issue has been resolved and has had the SysOps team employ various AWS monitoring and security services.",
+          "options": [
+            "Action",
+            "Version",
+            "Effect",
+            "Status",
+            "Start Time"
+          ],
+          "explanation": "Standard IAM policy condition blocks track authorization API states using parameters like the explicit policy Version, the query Effect status, and the validation Start Time window.",
+          "correctAnswers": [
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "id": "h_examprep_q56",
+          "text": "A non-profit organization has multiple committees that have individual accounts. They are looking at ways to reduce cost, yet ensure that expenses are best utilized across the committees and are finding that individual accounts are no longer working. Since they receive donations, they want to ensure that they can provide use and expense details to their donors when requested.",
+          "options": [
+            "The Support Specialist has noticed the service control policies (SCPs) in AWS Organizations has exceeded its maximum size. She has begun removing some of the white space characters outside the quotation marks.",
+            "What is the maximum size of an SCP document so she can correct the error?",
+            "1,510 bytes",
+            "2,048 characters",
+            "10,240 characters",
+            "5,120 bytes"
+          ],
+          "explanation": "AWS Organizations enforces a strict maximum document storage constraint limit of exactly 5,120 bytes for every individual Service Control Policy (SCP) JSON file.",
+          "correctAnswer": 5
+        },
+        {
+          "id": "h_examprep_q57",
+          "text": "A global travel company has announced a company restructure in order to re-invest profits into customer facing technology. The IT budget has been re-allocated by 20% for the upcoming year; therefore, staff will be forced to make standardizations and efficiencies with the new budget until the new technology generates increased profits.",
+          "options": [
+            "Coordinating the creation of stack resources",
+            "Sending responses to resources within an AWS virtual private cloud (VPC)",
+            "Automatically scaling resource",
+            "Tracking the status of configuration process",
+            "Tracking the configuration of Amazon Elastic Compute Cloud (Amazon EC2) instances"
+          ],
+          "explanation": "AWS CloudFormation automates configuration infrastructure deployments while generating event state updates to transparently track the setup process status.",
+          "correctAnswers": [
+            3,
+            4
+          ]
+        },
+        {
+          "id": "h_examprep_q58",
+          "text": "The local power company has recently installed a new power grid within the community. They are working with the local government to acquire funding for a second power grid, but must show data that shows the cost reductions and how that translates to increased consumption time windows. This data needs to be kept for a minimum of 10 years in case of audit or by inquiry of a government agency. The power company wants to engage the community and gain their support, as their individual and communal power consumption is reflected in the data. The CEO has decided that the company will now begin processing the big data in real time through the use of Amazon Kinesis. The architecture has been developed with, an intermediate and backup Amazon Simple Storage Service (Amazon S3) bucket for potential delivery failures and source records.",
+          "options": [
+            "Amazon Elastic Block Store (Amazon EBS)",
+            "Amazon Simple Storage Service (Amazon S3)",
+            "Amazon Redshift cluster",
+            "Amazon Elasticsearch Service (Amazon ES)",
+            "Amazon Glacier"
+          ],
+          "explanation": "For complex analytics, real-time Kinesis data is streamed into an Amazon Redshift cluster warehouse for parsing, while raw backups are moved to Amazon S3 Glacier to meet a 10-year audit retention policy.",
+          "correctAnswers": [
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Compute",
+      "questions": [
+        {
+          "id": "h_examprep_q59",
+          "text": "What is the pricing model that enables AWS customers to pay for resources on an as- needed basis? (Select the best answer.)",
+          "options": [
+            "Pay as you buy",
+            "Pay as you reserve",
+            "Pay as you decommission",
+            "Pay as you go"
+          ],
+          "explanation": "The pay-as-you-go model allows operational cost flexibility, letting users adapt to changing business needs without overcommitting budgets.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q60",
+          "text": "All are a cloud deployment model EXCEPT:",
+          "options": [
+            "Platform as a service (PaaS)",
+            "Software as a service (SaaS)",
+            "System administration as a service",
+            "Infrastructure as a service (IaaS)"
+          ],
+          "explanation": "Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS) are the three primary standard cloud computing service types.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q61",
+          "text": "True or False? AWS owns and maintains the network-connected hardware required for application services, while you provision and use what you need.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "explanation": "Under the cloud utility framework, AWS manages physical facilities and network infrastructure assets while customers build logical systems on top.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q62",
+          "text": "Which of these is not a primary benefit of cloud computing over on-premises computing? Select the best answer.",
+          "options": [
+            "Eliminate guessing on your infrastructure capacity needs",
+            "Benefit from massive economies of scale",
+            "Increased speed and agility",
+            "Pay for racking, stacking, and powering servers"
+          ],
+          "explanation": "Eliminating costly physical maintenance burdens like racking, stacking, and power delivery is a core value proposition of shifting off on-premises setups.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q63",
+          "text": "All are benefits of AWS Cloud computing EXCEPT (Choose two):",
+          "options": [
+            "High latency",
+            "Temporary and disposable resources",
+            "High availability",
+            "Multiple procurement cycles",
+            "Fault-tolerant databases"
+          ],
+          "explanation": "Cloud computing replaces long corporate hardware procurement cycles with fast API calls and provides high availability with low network latency thresholds.",
+          "correctAnswers": [
+            0,
+            3
+          ]
+        },
+        {
+          "id": "h_examprep_q64",
+          "text": "What is a reason businesses are switching to cloud computing?",
+          "options": [
+            "Instant configuration",
+            "Finite infrastructure",
+            "Increased speed and agility",
+            "Over provisioning"
+          ],
+          "explanation": "Cloud elasticity grants technology teams the capability to spin up resources instantly, minimizing time-to-market constraints and eliminating over-provisioning waste.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q65",
+          "text": "True or False? Cloud computing provides a simple way to access servers, storage, databases, and a broad set of application services over the internet. You own the network-connected hardware required for these services and AWS provisions what you need.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "explanation": "This statement is false because the cloud provider (AWS) owns and maintains the physical data center hardware assets, not the end customer.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q66",
+          "text": "Economies of scale result from ___. Select the best answer.",
+          "options": [
+            "having to invest heavily in data centers and servers",
+            "having hundreds of thousands of customers aggregated in the cloud",
+            "having many different cloud providers",
+            "having hundreds of cloud services available over the internet"
+          ],
+          "explanation": "Aggregating usage across hundreds of thousands of active customer nodes allows AWS to achieve massive bulk discounts and regularly pass structural cost savings back to users.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q67",
+          "text": "What are the three ways to access AWS services? Select three responses.",
+          "options": [
+            "Software development kits SDKs",
+            "AWS Management Console",
+            "AWS Command Line Interface AWS CLI",
+            "Calling technical support",
+            "Through the AWS Marketplace"
+          ],
+          "explanation": "The management console web interface, programmatic API command terminals (CLI), and language runtimes (SDKs) form the primary interaction layers for AWS services.",
+          "correctAnswers": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "h_examprep_q87",
+          "text": "Which category of service does Amazon Lightsail belong to?",
+          "options": [
+            "Infrastructure as a service (IaaS)",
+            "Platform as a service (PaaS)",
+            "Function as a service (FaaS)",
+            "Software as a service (SaaS)"
+          ],
+          "explanation": "Amazon Lightsail provides simplified pre-configured virtual private servers, storage, and databases, acting as a classic cloud Platform as a Service (PaaS) solution.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q88",
+          "text": "True or False? You can launch multiple instances of different types from a single Amazon Machine Image (AMI) when you launch an Amazon Elastic Compute Cloud (Amazon EC2) instance.",
+          "options": [
+            "False",
+            "True"
+          ],
+          "explanation": "An Amazon Machine Image (AMI) provides a software configuration template from which you can launch many distinct virtual machine instance types.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q89",
+          "text": "If your project requires you to run monthly reports that iterate through very large amounts of data, which Amazon Elastic Compute Cloud (Amazon EC2) purchasing option should you consider?",
+          "options": [
+            "On-Demand Instances",
+            "Spot Instances",
+            "Dedicated Hosts",
+            "Scheduled Reserved Instances"
+          ],
+          "explanation": "Scheduled Reserved Instances allow you to purchase capacity reservations that recur predictably at specific times, making them ideal for tasks like predictable monthly report generations.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q90",
+          "text": "Which Amazon Elastic Compute Cloud (Amazon EC2) feature ensures your instances will not share a physical host with instances from any other AWS customer?",
+          "options": [
+            "Dedicated Instances",
+            "Amazon Virtual Private Cloud",
+            "Reserved Instances",
+            "Placement groups"
+          ],
+          "explanation": "Dedicated Instances are EC2 virtual servers that run in an isolated VPC on physical host hardware reserved exclusively for a single AWS account holder.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q91",
+          "text": "With the \"Pay as you go\" pricing model, what is the billing interval for compute resources from the time you launch a resource until you terminate it?",
+          "options": [
+            "Monthly",
+            "Daily",
+            "Quarterly",
+            "Hourly and by the second"
+          ],
+          "explanation": "AWS compute resource pricing operates dynamically; depending on the OS platform, you are billed on an hourly or per-second interval for the precise duration resources run.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q92",
+          "text": "Your web application needs four instances to support steady traffic all the time. On the last day of the month, the traffic triples. What is the most cost-effective way to handle this pattern?",
+          "options": [
+            "Run four Reserved Instances constantly, then add eight On-Demand Instances on the last day of each month.",
+            "Run four On-Demand Instances constantly, then add eight more On-Demand Instances on the last day of each month.",
+            "Run 12 Reserved Instances all of the time.",
+            "Run four On-Demand Instances consistently, then add eight Reserved Instances on the last day of each month."
+          ],
+          "explanation": "Reserved Instances provide heavy cost discounts for predictable baseline workloads (4 instances), while On-Demand instances handle elastic demand spikes cost-effectively.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q93",
+          "text": "Which of the following must be specified when launching a new Amazon Elastic Compute Cloud (Amazon EC2) Windows instance? Select two responses.",
+          "options": [
+            "Amazon Machine Image (AMI)",
+            "Password for the administrator account",
+            "Amazon EC2 instance ID",
+            "Amazon EC2 instance type"
+          ],
+          "explanation": "Launching an EC2 instance fundamentally requires selecting the virtual operating system image template (AMI) and the hardware capacity size footprint (Instance Type).",
+          "correctAnswers": [
+            0,
+            3
+          ]
+        },
+        {
+          "id": "h_examprep_q94",
+          "text": "Why is AWS more economical than traditional data centers for applications with varying compute workloads? Select the best answer.",
+          "options": [
+            "Customers can permanently run enough instances to handle peak workloads.",
+            "Customers retain full administrative access to their Amazon EC2 instances",
+            "Amazon EC2 costs are billed on a monthly basis.",
+            "Amazon EC2 instances can be launched on-demand when needed."
+          ],
+          "explanation": "On-demand elasticity allows you to deploy hardware capacity instantly when user traffic spikes and turn it off when load subsides, preventing data center infrastructure waste.",
+          "correctAnswer": 3
+        }
+      ]
+    },
+    {
+      "section": "Economics",
+      "questions": [
+        {
+          "id": "h_examprep_q68",
+          "text": "For certain services like Amazon Elastic Compute Cloud (Amazon EC2) and Amazon Relational Database Service (Amazon RDS), you can invest in reserved capacity. Reserved Instances are available in what three payment options? (Select THREE.)",
+          "options": [
+            "Scheduled Instance (Sl)",
+            "Partial up-front reserved instance (PURI)",
+            "No up-front (NURI)",
+            "All up-front capacity reservation (AUCR)",
+            "All up-front reserved instance (AURI)"
+          ],
+          "explanation": "AWS Reserved Instances provide flexibility by offering three distinct payment options: No Up-front, Partial Up-front, and All Up-front.",
+          "correctAnswers": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "id": "h_examprep_q69",
+          "text": "What type of AWS data transfer is free for Amazon Simple Storage Service (Amazon S3)? (Select THREE.)",
+          "options": [
+            "Up to 1 GB data transfer OUT from Amazon S3 to the internet",
+            "Outbound data transfer from Amazon S3 to Amazon CloudFront",
+            "Outbound data transfer from Amazon S3 to all Regions",
+            "Data transfer IN to Amazon S3 from Internet"
+          ],
+          "explanation": "AWS does not charge for inbound data transfers from the internet, outbound transfers from S3 to CloudFront edge caches, or standard usage within the free tier limits.",
+          "correctAnswers": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "h_examprep_q70",
+          "text": "True or false? To receive the discounted rate associated with Reserved Instances, you must make a full, up-front payment for the term of the agreement.",
+          "options": [
+            "False",
+            "True"
+          ],
+          "explanation": "Reserved Instances allow you to choose a 'No Up-front' or 'Partial Up-front' payment plan and still receive a discounted hourly rate compared to On-Demand pricing.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q71",
+          "text": "There is no charge for which of the following? (Select TWO.)",
+          "options": [
+            "Outbound data transfer",
+            "Inbound data transfer",
+            "Compute",
+            "Data transfer between services",
+            "Storage"
+          ],
+          "explanation": "As a baseline billing rule, inbound data transfer from the internet is free, and transferring data between internal services within the same availability zone incurs no network cost.",
+          "correctAnswers": [
+            1,
+            3
+          ]
+        },
+        {
+          "id": "h_examprep_q72",
+          "text": "How often do you pay for compute resources from the time you launch a resource until you terminate it with the \"pay as you go\" pricing model?",
+          "options": [
+            "Daily",
+            "Secondly and hourly",
+            "Quarterly",
+            "Monthly"
+          ],
+          "explanation": "Under the pay-as-you-go model, operational compute resources are billed flexibly based on actual usage fractions calculated by the hour or by the second.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q73",
+          "text": "As AWS grows, the general cost of doing business is reduced and savings are passed back to the customer in the form of lower pricing. What is this optimization called?",
+          "options": [
+            "Economies of optimization",
+            "Economies of scale",
+            "Economies of labor",
+            "Economies of scope"
+          ],
+          "explanation": "Economies of scale occur when aggregating massive quantities of customer infrastructure allows AWS to procure hardware at bulk discounts and lower prices for everyone.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q74",
+          "text": "True or false? AWS offers a variety of services at no charge. For example, Amazon Virtual Private Cloud (Amazon VPC), AWS Identity and Access Management (IAM), consolidated billing, AWS Elastic Beanstalk, AWS Auto Scaling, AWS OpsWorks and AWS CloudFormation. Although there is no charge for these services, there may be charges associated with other AWS services used in conjunction with these services.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "explanation": "Many core provisioning tools carry no service fee, but you remain responsible for the underlying compute instances, storage volumes, or databases they create.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q75",
+          "text": "When are free AWS data transfers applicable? (Select TWO.)",
+          "options": [
+            "Free inbound data transfer across all AWS services in all Regions",
+            "Free outbound data transfer across all AWS services in all Regions",
+            "Free outbound data transfers within the same Region, within the same Availability Zone, and that use a private IP address",
+            "Free inbound data transfer for Amazon Elastic Compute Cloud (Amazon EC2) instances"
+          ],
+          "explanation": "Inbound data transfers are free, and outbound network traffic is unbilled if it stays within the same region and availability zone while utilizing private IP space.",
+          "correctAnswers": [
+            2,
+            3
+          ]
+        },
+        {
+          "id": "h_examprep_q76",
+          "text": "True or false? Unlimited services are available via the AWS Free Tier to new AWS customers for 12 months following their AWS signup date.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "explanation": "The 12-Month Free Tier limits resource consumption to specific service quotas rather than offering unlimited free usage.",
+          "correctAnswer": 1
+        }
+      ]
+    },
+    {
+      "section": "Infrastructure",
+      "questions": [
+        {
+          "id": "h_examprep_q77",
+          "text": "Which component of the AWS global infrastructure does Amazon CloudFront use to ensure low-latency delivery?",
+          "options": [
+            "AWS Regions",
+            "AWS Availability Zone",
+            "Amazon Virtual Private Cloud (Amazon VPC)",
+            "AWS Edge Locations"
+          ],
+          "explanation": "Amazon CloudFront relies on a global network of AWS Edge Locations to cache and distribute copies of content closer to international users, drastically minimizing latency.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q78",
+          "text": "You can run applications and workloads from a Region to ___ latency to end users.",
+          "options": [
+            "increase",
+            "maintain",
+            "measure",
+            "decrease"
+          ],
+          "explanation": "Deploying your architecture workloads inside an AWS Region physically located near your primary target audience allows you to significantly decrease round-trip network latency.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q79",
+          "text": "True or False? Each Availability Zone is designed to be isolated from failures in other Availability Zones.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "explanation": "Every Availability Zone is engineered within distinct physical structures with independent power utility grids and cooling loops to isolate physical failure hazards from neighboring zones.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q80",
+          "text": "Which of the following are geographic areas that host two or more Availability Zones?",
+          "options": [
+            "AWS Regions",
+            "Compute zones",
+            "Edge locations",
+            "AWS Origins"
+          ],
+          "explanation": "An AWS Region represents a distinct, isolated geographic footprint worldwide that encapsulates a minimum cluster of two or more interconnected Availability Zones.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q81",
+          "text": "___ means the infrastructure has built in component redundancy and ___ means that resources dynamically adjust to increases or decreases in capacity requirements.",
+          "options": [
+            "Fault tolerant, elastic and scalable",
+            "Fault tolerant, no human intervention",
+            "Elastic and scalable, no human intervention",
+            "Elastic and scalable, fault tolerant"
+          ],
+          "explanation": "Fault tolerance signifies structural component redundancy capable of absorbing hardware failure seamlessly, while elasticity defines dynamic resource capacity adjustment under volatile workloads.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q82",
+          "text": "True or False? Availability Zones within a Region are connected through low-latency links.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "explanation": "Availability Zones situated within the same corporate Region link directly to each other through redundant, ultra-fast fiber optic network lines.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q83",
+          "text": "Which of these statements about Availability Zones is not true? Select the best answer.",
+          "options": [
+            "A data center can be used for more than one Availability Zone.",
+            "Availability Zones are connected to each other using high-speed private links.",
+            "Availability Zones are designed for fault isolation.",
+            "Availability Zones are made up of one or more data centers."
+          ],
+          "explanation": "An Availability Zone can encapsulate multiple distinct physical data center locations, but a single physical data center facility can never be shared across separate Availability Zones.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q84",
+          "text": "What is true about Regions? Select two responses.",
+          "options": [
+            "Each region is located in a separate geographic area.",
+            "Regions are the physical locations of your customers.",
+            "Each region is a physical location that has multiple Availability Zones.",
+            "All regions are located in one specific geographic area."
+          ],
+          "explanation": "AWS Regions are completely isolated geographic territories containing multiple cluster hubs of Availability Zones designed to house application backends close to specific markets.",
+          "correctAnswers": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": "h_examprep_q85",
+          "text": "AWS highly recommends provisioning your compute resources across ___ Availability Zones. Select the best answer.",
+          "options": [
+            "single",
+            "no",
+            "multiple",
+            "all"
+          ],
+          "explanation": "AWS architecture frameworks dictate provisioning redundant environment compute targets across multiple Availability Zones to secure structural high availability and system resilience.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q86",
+          "text": "True or False? Edge locations are only located in the same general area as Regions.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "explanation": "Edge locations operate independently from the main data centers and are distributed globally across major metropolitan populations far away from standard parent AWS Regions.",
+          "correctAnswer": 1
+        }
+      ]
+    },
+    {
+      "section": "IAM",
+      "questions": [
+        {
+          "id": "h_examprep_q95",
+          "text": "In the shared responsibility model, AWS has the responsibility of providing what?",
+          "options": [
+            "Security in the cloud",
+            "Security of the cloud",
+            "Security to the cloud",
+            "Security for the cloud"
+          ],
+          "explanation": "Under the shared responsibility model, AWS is strictly accountable for the 'security of the cloud,' which includes the physical infrastructure, virtualization software layer, and global networking.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q96",
+          "text": "In the shared responsibility model, which of the following are examples of \"security in the cloud?\" (Select TWO.)",
+          "options": [
+            "Protecting the global infrastructure",
+            "Which AWS services are used with the content",
+            "Compliance with compute security standards and regulations",
+            "Physical security of the facilities where the services operate",
+            "In which country content is stored"
+          ],
+          "explanation": "The customer owns 'security in the cloud,' meaning they control data storage locations, access permissions, network settings, and how specific AWS services are deployed.",
+          "correctAnswers": [
+            1,
+            4
+          ]
+        },
+        {
+          "id": "h_examprep_q97",
+          "text": "Which of the following are some of the security benefits that AWS offers? (Select TWO.)",
+          "options": [
+            "Shared collaboration model",
+            "Infrastructure that meets compliance requirements",
+            "Inventory and application management",
+            "Data storage",
+            "Secure global infrastructure"
+          ],
+          "explanation": "AWS delivers structural security advantages by offering a globally protected infrastructure footprint alongside automated configurations designed to satisfy stringent third-party compliance standards.",
+          "correctAnswers": [
+            1,
+            4
+          ]
+        },
+        {
+          "id": "h_examprep_q98",
+          "text": "True or False? AWS is responsible for the security of everything above the hypervisor layer.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "explanation": "AWS maintains accountability up to the virtualization hypervisor layer; the customer assumes full operational responsibility for configuring the guest operating system and applications loaded on top.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q99",
+          "text": "Which of the following is the responsibility of AWS under the shared responsibility model?",
+          "options": [
+            "Managing custom Amazon Machine Images (AMIs)",
+            "Configuring third-party applications",
+            "Maintaining physical hardware",
+            "Securing application access and data"
+          ],
+          "explanation": "AWS manages physical data center facility assets and bare-metal service hardware maintenance, while shifting configuration access rules and data security parameters to the customer.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q100",
+          "text": "Which resource provides trusted users with temporary security credentials that can control access to your AWS resources?",
+          "options": [
+            "AWS Identity and Access Management (IAM) User",
+            "AWS Security Token Service (AWS STS)",
+            "Application authentication",
+            "AWS Command Line Interface (AWS CLI)"
+          ],
+          "explanation": "AWS STS is a web service framework designed to issue temporary, short-lived security credentials to authorized users, applications, or federated roles dynamically.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q101",
+          "text": "Which of the following are AWS Identity and Access Management (IAM) best practices? (Select TWO.)",
+          "options": [
+            "Leave unused and unnecessary users and credentials in place.",
+            "Provide users with default administrative privileges.",
+            "Monitor activity in your AWS account.",
+            "Rotate credentials regularly.",
+            "Do not use groups to assign permissions to IAM users; provide each user with their own set of custom permissions."
+          ],
+          "explanation": "Core identity management best practices dictate enforcing credential rotation rules, conducting regular audit loops, and limiting user access strictly according to the principle of least privilege.",
+          "correctAnswers": [
+            2,
+            3
+          ]
+        },
+        {
+          "id": "h_examprep_q102",
+          "text": "True or False? AWS Identity and Access Management (IAM) is appropriate for operating system (OS) and application authentication.",
+          "options": [
+            "False",
+            "True"
+          ],
+          "explanation": "IAM handles identity and programmatic permission boundaries for AWS cloud resource APIs, not internal OS-level user accounts or independent in-app database authentication logins.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q103",
+          "text": "Where can a customer find information about prohibited actions on AWS infrastructure?",
+          "options": [
+            "AWS Billing Console",
+            "AWS Trusted Advisor",
+            "AWS Identity and Access Management (IAM)",
+            "AWS Acceptable Use Policy"
+          ],
+          "explanation": "The AWS Acceptable Use Policy specifies absolute constraints regarding prohibited behavior, vulnerability testing parameters, and network abuse boundaries on their cloud architecture.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q104",
+          "text": "True or False? The access key and secret access key are used to log into the AWS Management Console.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "explanation": "Long-lived access key IDs and secret access keys authenticate programmatic API calls via the CLI or SDKs, whereas interactive console logins require standard passwords and MFA tokens.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q105",
+          "text": "True or False? Using AWS Identity and Access Management (IAM) groups is the recommended way to manage the permission of IAM users by job function.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "explanation": "Assigning permissions to IAM Groups matching distinct business job functions simplifies access administration and eliminates the security risks of hardcoding individual policies to separate users.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q106",
+          "text": "After initial login, what does AWS recommend as the best practice for the AWS account root user?",
+          "options": [
+            "Delete the root user account",
+            "Delete root user access keys",
+            "Revoke all permissions on the root user account",
+            "Restrict permission on the root user account"
+          ],
+          "explanation": "AWS strongly recommends deleting all long-lived access keys associated with the account root user immediately after creation to mitigate credential exposure risks.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q107",
+          "text": "How would a system administrator add an additional layer of login security to a user's access to the AWS Management Console?",
+          "options": [
+            "Enable multi-factor authentication (MFA)",
+            "Audit AWS Identity and Access Management (IAM) roles",
+            "Enable AWS CloudTrail",
+            "Use Amazon Cloud Directory"
+          ],
+          "explanation": "Multi-Factor Authentication (MFA) mandates that console users present a secondary dynamic token validation factor during authorization, mitigating the risk of compromised passwords.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q108",
+          "text": "Which of the following are advantages of AWS Cloud security? (Select TWO.)",
+          "options": [
+            "AWS infrastructure security auditing is periodic and manual.",
+            "AWS uses single-factor access control systems.",
+            "You retain complete control and ownership of your data Region.",
+            "AWS retains complete control and ownership of your data Region.",
+            "AWS uses multi-factor access control systems."
+          ],
+          "explanation": "AWS cloud infrastructure security grants users complete ownership and regional sovereignty over their assets while providing multi-factor internal access control mechanisms.",
+          "correctAnswers": [
+            2,
+            4
+          ]
+        },
+        {
+          "id": "h_examprep_q109",
+          "text": "What is AWS Trusted Advisor?",
+          "options": [
+            "A Professional Services offering hat helps you migrate to the cloud.",
+            "A partner program that helps you validate your application deployment.",
+            "An online tool that helps you configure resources to follow best practices.",
+            "An AWS service that helps you manage access to your account."
+          ],
+          "explanation": "AWS Trusted Advisor functions as an optimization engine that continuously scans resource settings against cloud architecture standards across cost, performance, and security categories.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q110",
+          "text": "#### 16.Which of the following are included in AWS Assurance Programs? (Select TWO.)",
+          "options": [
+            "Laws, regulations, and privacy",
+            "Industry best practices",
+            "Certifications and attestations",
+            "Customer testimonials",
+            "Partner validations"
+          ],
+          "explanation": "AWS Assurance Programs provide verification through independent compliance certifications, official security attestations, legal frameworks, and regional regulatory alignments.",
+          "correctAnswers": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": "h_examprep_q111",
+          "text": "When you create an AWS Identity and Access Management (IAM) policy, what are the two types of access that can be granted to a user? (Select TWO.)",
+          "options": [
+            "AWS Management Console access",
+            "Administrative root access",
+            "Institutional access",
+            "Authorized access",
+            "Programmatic access"
+          ],
+          "explanation": "IAM permissions support interactive Management Console entry via standard credential fields or programmatic endpoint access driven by API keys, CLI, and SDK runtime operations.",
+          "correctAnswers": [
+            0,
+            4
+          ]
+        },
+        {
+          "id": "h_examprep_q112",
+          "text": "The AWS risk and compliance program is made up of which of the following components? (Select THREE.)",
+          "options": [
+            "Risk management",
+            "Information security",
+            "Physical security",
+            "Automation environment",
+            "Controlled environment"
+          ],
+          "explanation": "The structural AWS risk and compliance framework is built on three core pillars: proactive risk management loops, comprehensive information security policies, and an auditing controlled environment.",
+          "correctAnswers": [
+            0,
+            1,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "section": "VPC",
+      "questions": [
+        {
+          "id": "h_examprep_q113",
+          "text": "Which AWS networking service enables a company to create a virtual network within AWS? Select the best answer.",
+          "options": [
+            "Amazon Route 53",
+            "AWS Config",
+            "AWS Direct Connect",
+            "Amazon Virtual Private Cloud (Amazon VPC)"
+          ],
+          "explanation": "Amazon VPC allows you to provision a logically isolated section of the AWS cloud where you can launch resources in a virtual network you define.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q114",
+          "text": "What is the minimum size subnet you can have in an Amazon Virtual Private Cloud (Amazon VPC)?",
+          "options": [
+            "/30",
+            "/26",
+            "/24",
+            "/28"
+          ],
+          "explanation": "The smallest subnet allowed in an Amazon VPC is a /28 block, which provides 16 total IP addresses (11 usable after AWS reservations).",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q115",
+          "text": "What is the maximum IPv4 address range size you can have in an Amazon Virtual Private Cloud (Amazon VPC)?",
+          "options": [
+            "/30",
+            "/28",
+            "/24",
+            "/16"
+          ],
+          "explanation": "The maximum allowed size for a primary or secondary IPv4 CIDR block in an Amazon VPC is /16, providing up to 65,536 total IP addresses.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q116",
+          "text": "You must allow resources in a private subnet to access the internet. Which of the following provides this capability?",
+          "options": [
+            "Network access control lists (network ACLs)",
+            "Route tables",
+            "Security groups",
+            "Network address translation (NAT) Gateway"
+          ],
+          "explanation": "A NAT Gateway enables resources in a private subnet to connect outbound to the internet while preventing the internet from initiating inbound connections with those instances.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q117",
+          "text": "True or False? Private subnets have direct access to the internet.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "explanation": "Private subnets lack a route to an Internet Gateway (IGW), meaning they cannot directly send or receive traffic from the public internet.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q118",
+          "text": "Which component of the AWS global infrastructure does Amazon CloudFront use to ensure low-latency delivery? Select the best answer.",
+          "options": [
+            "AWS Regions",
+            "AWS Availability Zones",
+            "AWS edge locations",
+            "Amazon Virtual Private Cloud (Amazon VPC)"
+          ],
+          "explanation": "Amazon CloudFront utilizes a worldwide network of edge locations to cache and serve content closer to end users, minimizing latency.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q119",
+          "text": "Which of the following is an optional security control that can be applied at the subnet layer of a VPC?",
+          "options": [
+            "Security group",
+            "Firewall",
+            "Web application firewall (WAF)",
+            "Network Access Control List (NACL)"
+          ],
+          "explanation": "Network Access Control Lists (NACLs) operate as a stateless firewall layer checking traffic at the boundary of the subnet, rather than the individual instance level.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q120",
+          "text": "What happens when you create a new virtual private cloud (VPC) with Amazon Virtual Private Cloud (Amazon VPC)? Select the best answer.",
+          "options": [
+            "A main route table is created by default.",
+            "Three subnets are created by default, with one subnet for each Availability Zone.",
+            "Three subnets are created by default in one Availability Zone.",
+            "An internet gateway is created by default."
+          ],
+          "explanation": "When a new custom VPC is created, AWS automatically provisions a default main route table, a default network ACL, and a default security group.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q121",
+          "text": "How many internet gateways (IGWs) can you attach to an Amazon VPC at any one time?",
+          "options": [
+            "4",
+            "1",
+            "3",
+            "2"
+          ],
+          "explanation": "An Amazon VPC can have exactly one Internet Gateway (IGW) attached to it at any single point in time.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q122",
+          "text": "You are a solutions architect who works for a large retail company that is migrating its existing infrastructure to AWS. You recommend they use a custom Amazon Virtual Private Cloud (Amazon VPC). They will need a public subnet for their web servers and a private subnet for their databases. They require web servers and database servers to be highly available, with a minimum of two web servers and two database servers each.",
+          "options": [
+            "4",
+            "2",
+            "3",
+            "1"
+          ],
+          "explanation": "To satisfy high availability across two public web servers and two private database servers, the layout requires duplicating subnets over two unique Availability Zones (4 total subnets).",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q123",
+          "text": "What is used to divide an Amazon Virtual Private Cloud (Amazon VPC)?",
+          "options": [
+            "Classless Inter-Domain Routing (CIDR) block",
+            "Subnet",
+            "Availability Zones",
+            "Route table"
+          ],
+          "explanation": "Subnets are the core architectural component used to split a larger VPC CIDR block into smaller, isolated logical network segments within an Availability Zone.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q124",
+          "text": "What defines a subnet?",
+          "options": [
+            "Route table",
+            "Classless Inter-Domain Routing (CIDR) block",
+            "Instance",
+            "Availability Zones"
+          ],
+          "explanation": "A subnet's size and address bounds are strictly defined by its designated Classless Inter-Domain Routing (CIDR) block configuration.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q125",
+          "text": "How many IP addresses in a subnet are reserved by AWS?",
+          "options": [
+            "Three",
+            "Four",
+            "Two",
+            "Five"
+          ],
+          "explanation": "AWS reserves the first four IP addresses and the very last IP address of every subnet block (5 total) for internal networking, routing, and DNS administration functions.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q126",
+          "text": "Which statement describes an elastic network interface?",
+          "options": [
+            "A static IPv4 address designed for dynamic cloud computing.",
+            "Enables the creation of a private connection between your Amazon Virtual Private Cloud (Amazon VPC) without requiring access over the internet or through a",
+            "network address translation (NAT) instance.",
+            "A virtual network interface that you can attach to an instance in an Amazon Virtual Private Cloud (Amazon VPC).",
+            "An Amazon managed resource designed to operate like a network address translation (NAT) instance, but is simpler to manage and is highly available within an Availability Zone."
+          ],
+          "explanation": "An Elastic Network Interface (ENI) represents a logical virtual network card component that can be created, configured, and bound dynamically to an EC2 instance.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q127",
+          "text": "True or False. Within a Region, you can create multiple Amazon Virtual Private Cloud (Amazon VPC) and have complete control of the network configuration for each VPC.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "explanation": "AWS allows you to build multiple distinct VPC networks within a single Region, granting absolute configuration authority over subnets, routing, and gateway parameters for each.",
+          "correctAnswer": 0
+        }
+      ]
+    },
+    {
+      "section": "Storage",
+      "questions": [
+        {
+          "id": "h_examprep_q128",
+          "text": "True or False? Amazon Simple Storage Service (Amazon S3) is an object storage suitable for the storage of flat files like Microsoft Word documents, photos, and so on.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "explanation": "Amazon S3 is a cloud-native object storage service designed to store and manage unstructured flat files as discrete object key-value payloads.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q129",
+          "text": "Amazon Simple Storage Service (Amazon S3) replicates all objects ___.",
+          "options": [
+            "on multiple S3 buckets",
+            "in multiple Availability Zones within the same Region",
+            "on multiple volumes within an Availability Zone",
+            "across multiple Regions for higher durability"
+          ],
+          "explanation": "To guarantee 99.999999999% durability, Amazon S3 automatically creates redundant baseline copies of your objects across at least three physical Availability Zones inside the target Region.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q130",
+          "text": "Which of the following can be used as a storage class for an Amazon Simple Storage Service (Amazon S3) object lifecycle policy? (Select THREE.)",
+          "options": [
+            "Amazon Simple Storage Service Glacier",
+            "Storage gateway",
+            "Amazon DynamoDB",
+            "S3 - Reduced Redundancy Storage",
+            "S3 - Infrequent Access",
+            "S3 - Standard Access"
+          ],
+          "explanation": "S3 Standard, S3 Infrequent Access (IA), and Amazon S3 Glacier represent distinct architectural storage classes supported within automated lifecycle tier transition rule loops.",
+          "correctAnswers": [
+            0,
+            4,
+            5
+          ]
+        },
+        {
+          "id": "h_examprep_q131",
+          "text": "The name of an Amazon Simple Storage Service (Amazon S3) bucket must be unique ___.",
+          "options": [
+            "within a Region",
+            "across all of your AWS accounts",
+            "worldwide across all AWS accounts",
+            "within your AWS account"
+          ],
+          "explanation": "Amazon S3 uses a global namespace structure, meaning every bucket name must be globally unique worldwide across all active corporate and individual AWS customer accounts.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q132",
+          "text": "What can you use Amazon Simple Storage Service (Amazon S3) for with your web application?",
+          "options": [
+            "Store static content such as images, video, CSS, JavaScript, and so on",
+            "Generate user-specific content",
+            "Distribute static and dynamic content",
+            "Host a robust content delivery network (CDN) to deliver entire websites with dynamic, static, and streaming content"
+          ],
+          "explanation": "Amazon S3 is optimized to host immutable assets like videos, CSS layouts, images, and HTML wrappers, while compute backends handle processing tasks.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q133",
+          "text": "Amazon Elastic Block Store (Amazon EBS) is recommended when data ___. (Select TWO.)",
+          "options": [
+            "must be stored in a different Availability Zone than the one the Amazon Elastic Compute Cloud (Amazon EC2) instance is in",
+            "requires object-level storage",
+            "must be quickly accessible, requiring long-term persistence",
+            "requires an encryption solution"
+          ],
+          "explanation": "Amazon EBS provides block-level persistent storage media volumes that support fast block updates, high read/write IOPS performance, and seamless internal KMS volume encryption patterns.",
+          "correctAnswers": [
+            2,
+            3
+          ]
+        },
+        {
+          "id": "h_examprep_q134",
+          "text": "True or False? By default, all data stored in Amazon Simple Storage Service (Amazon S3) is viewable by the public.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "explanation": "By default, the AWS implicit root configuration enforces private visibility restrictions on newly provisioned S3 storage buckets, blocking public web traffic.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q135",
+          "text": "Regarding Amazon Simple Storage Service Glacier, what is a vault?",
+          "options": [
+            "An object (photos, videos, files, or documents)",
+            "A container for storing archives",
+            "A policy that identifies who can access content stored in Amazon S3 Glacier.",
+            "The rules that determine who can (or cannot) access archives"
+          ],
+          "explanation": "In Amazon S3 Glacier storage pools, a vault represents a secure workspace container block used to aggregate, manage, and audit long-term archive collections.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q136",
+          "text": "True or False? Access control lists are used to make entire buckets public, like one hosting a website on Amazon Simple Storage Service (Amazon S3).",
+          "options": [
+            "False",
+            "True"
+          ],
+          "explanation": "Bucket policies, rather than granular Access Control Lists (ACLs), are the standard modern mechanism used to apply broad bucket-wide read permissions for public static website hosting layouts.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q137",
+          "text": "Which of the following are features of Amazon Elastic Block Store (Amazon EBS)? (Select TWO.)",
+          "options": [
+            "Amazon EBS data is automatically backed up to tape.",
+            "Amazon EBS volumes can be encrypted transparently to workloads on the attached instance.",
+            "Data on an Amazon EBS volume is lost when the attached instance is stopped.",
+            "Amazon EBS is automatically replicated within an Availability Zone."
+          ],
+          "explanation": "Amazon EBS block volumes offer persistent encryption options and automatically replicate data blocks inside their target Availability Zone to prevent unexpected hardware module failures from causing data loss.",
+          "correctAnswers": [
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Databases",
+      "questions": [
+        {
+          "id": "h_examprep_q138",
+          "text": "You are designing an ecommerce web application that will scale to hundreds of thousands of concurrent users. Which database technology is best suited to hold the session state in this example?",
+          "options": [
+            "Data warehouse using Amazon Redshift",
+            "NoSQL database table using Amazon DynamoDB",
+            "Amazon Simple Storage Service (Amazon S3)",
+            "Relational database using Amazon Relational Database Service (Amazon RDS)"
+          ],
+          "explanation": "Amazon DynamoDB provides the single-digit millisecond latency and horizontal scaling required to manage session state for massive volumes of concurrent users.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q139",
+          "text": "You need to find an item in an Amazon DynamoDB table using an attribute other than the item's primary key. Which of the following operations should you use?",
+          "options": [
+            "Query",
+            "Scan",
+            "GET",
+            "POST"
+          ],
+          "explanation": "A Scan operation examines every item in a DynamoDB table sequentially, making it necessary when filtering by non-key attributes without an index.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q140",
+          "text": "Which AWS Cloud service is best suited for online analytic processing (OLAP)?",
+          "options": [
+            "Amazon Relational Database Service (Amazon RDS)",
+            "Amazon Redshift",
+            "Amazon DynamoDB",
+            "Amazon Simple Storage Service Glacier"
+          ],
+          "explanation": "Amazon Redshift is a fast, fully managed data warehouse optimized for complex analytical queries and Online Analytical Processing (OLAP) workloads.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q141",
+          "text": "In Amazon DynamoDB, an attribute is ___",
+          "options": [
+            "a data value",
+            "a fundamental data element",
+            "a collection of items",
+            "an operation on a table"
+          ],
+          "explanation": "In DynamoDB's data model, an attribute represents a fundamental data element that cannot or does not need to be broken down any further.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q142",
+          "text": "When you create a table in Amazon DynamoDB, in addition to the table name, you must specify the ___ of the table.",
+          "options": [
+            "sort key",
+            "local secondary index",
+            "global secondary index",
+            "primary key"
+          ],
+          "explanation": "Every DynamoDB table must have its primary key defined at creation time to uniquely identify items and distribute data across physical partitions.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q143",
+          "text": "___ is up to five times faster than standard MySQL databases and three times faster than standard PostgreSQL databases.",
+          "options": [
+            "Amazon DynamoDB",
+            "Amazon Redshift",
+            "Amazon Aurora",
+            "Amazon Neptune"
+          ],
+          "explanation": "Amazon Aurora is a cloud-native relational engine built for RDS that delivers up to 5x the throughput of standard MySQL and 3x of standard PostgreSQL.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q144",
+          "text": "If you are developing an application that requires a database with extremely fast ___ performance, fast scalability, and flexibility in the database schema, which database should you choose?",
+          "options": [
+            "Amazon Redshift",
+            "Amazon DynamoDB",
+            "Amazon ElastiCache",
+            "Amazon Relational Database Service (Amazon RDS)"
+          ],
+          "explanation": "Amazon DynamoDB is a NoSQL engine designed for single-digit millisecond performance, seamless throughput scaling, and schema flexibility.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q145",
+          "text": "True or False? Amazon Relational Database Service (Amazon RDS) automatically patches the database software and backs up your database, storing the backups for a user-defined retention period and enabling point-in-time recovery.",
+          "options": [
+            "False",
+            "True"
+          ],
+          "explanation": "As a managed service, Amazon RDS handles time-consuming administrative tasks like automated software patching, database backups, and point-in-time recovery tracking.",
+          "correctAnswer": 1
+        }
+      ]
+    },
+    {
+      "section": "Billing",
+      "questions": [
+        {
+          "id": "h_examprep_q146",
+          "text": "What are the four support plans offered by AWS? Choose four answers.",
+          "options": [
+            "Individual",
+            "Developer",
+            "Enterprise",
+            "Start-up",
+            "Basic",
+            "Business"
+          ],
+          "explanation": "AWS offers four progressive support plan tiers to meet different operational scopes: Basic, Developer, Business, and Enterprise.",
+          "correctAnswers": [
+            1,
+            2,
+            4,
+            5
+          ]
+        },
+        {
+          "id": "h_examprep_q147",
+          "text": "What are the characteristics of the Developer Support Plan? Select two responses.",
+          "options": [
+            "One primary contact can open a case",
+            "Unlimited contacts can open a case",
+            "Assigned to a Technical Account Manager (TAM)",
+            "24/7 access to Cloud Support Engineers via email, chat, and phone",
+            "Business hours access to Cloud Support Associates via email"
+          ],
+          "explanation": "The Developer plan allows only one primary contact to submit architecture questions via email, with response windows limited to local business hours.",
+          "correctAnswers": [
+            0,
+            4
+          ]
+        },
+        {
+          "id": "h_examprep_q148",
+          "text": "Which of the following is not available in the Business Support Plan? Select the best answer.",
+          "options": [
+            "Access to Cloud Support Engineers for technical issues",
+            "Access to a Well-Architected review delivered by AWS Solutions Architects",
+            "Access to third-party software support",
+            "Access to the Personal Health Dashboard and the AWS Health API"
+          ],
+          "explanation": "Well-Architected reviews delivered directly by AWS Solutions Architects are reserved for Enterprise-level customer accounts, not the standard Business plan.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q149",
+          "text": "Which of the AWS Support levels offers 24/7 support via phone or chat? Select two responses.",
+          "options": [
+            "Business Support",
+            "Basic Support",
+            "Developer Support",
+            "Enterprise Support"
+          ],
+          "explanation": "Both the Business and Enterprise support plans provide customers with full 24/7 access to Cloud Support Engineers via phone, text chat, or web console.",
+          "correctAnswers": [
+            0,
+            3
+          ]
+        },
+        {
+          "id": "h_examprep_q150",
+          "text": "Your company's IT management team is looking for an online tool to provide recommendations to save money, improve system availability and performance, and to help close security gaps. What tool can help the management team?",
+          "options": [
+            "AWS Config",
+            "AWS Trusted Advisor",
+            "Configuration recorder",
+            "Cloud Detective"
+          ],
+          "explanation": "AWS Trusted Advisor runs automated optimization checks across your account to evaluate cost savings, security baseline posture, fault tolerance, and performance metrics.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q151",
+          "text": "AWS Support has five different severity levels for support cases. What are they? Select five responses.",
+          "options": [
+            "Medium",
+            "High",
+            "Criticial",
+            "Urgent",
+            "Normal",
+            "Low",
+            "System Down"
+          ],
+          "explanation": "AWS Support tickets are categorized into five precise case severity impact tiers: Low, Normal, High, Urgent, and Critical.",
+          "correctAnswers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "id": "h_examprep_q152",
+          "text": "What is the response time of urgent issues for Enterprise Support Plan customers? Select the best answer.",
+          "options": [
+            "1 hour or less",
+            "12 hours or less",
+            "30 minutes or less",
+            "4 hours or less"
+          ],
+          "explanation": "Enterprise Support tier SLAs guarantee a rapid response time threshold of 1 hour or less for business-critical, urgent-severity system disruptions.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q153",
+          "text": "A Basic Support Plan allows how many support cases per month? Select the best answer.",
+          "options": [
+            "1",
+            "5",
+            "0",
+            "10"
+          ],
+          "explanation": "The free Basic Support Plan provides zero technical or architecture case allocations, limiting users strictly to billing queries and service limit adjustments.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q154",
+          "text": "What will AWS Trusted Advisor tell you? Select three responses.",
+          "options": [
+            "Whether or not you are using fault tolerance",
+            "How well the infrastructure is performing",
+            "Deployed resources that are not being used, but are incurring charges",
+            "Assess the risk of a single Region deployment",
+            "When security groups have been closed"
+          ],
+          "explanation": "AWS Trusted Advisor monitors active metrics to flag idle resources costing money, detect single-point infrastructure hazards, and review cluster baseline efficiency.",
+          "correctAnswers": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "h_examprep_q155",
+          "text": "Which AWS Support plan includes the assistance of a Technical Account Manager (TAM)? Select the best answer.",
+          "options": [
+            "Basic Support Plan",
+            "Developer Support Plan",
+            "Business Support Plan",
+            "Enterprise Support Plan"
+          ],
+          "explanation": "A designated Technical Account Manager (TAM) is a dedicated engineering advisor exclusively assigned to accounts operating on the Enterprise Support Plan tier.",
+          "correctAnswer": 3
+        }
+      ]
+    },
+    {
+      "section": "Architecture",
+      "questions": [
+        {
+          "id": "h_examprep_q156",
+          "text": "Which of the following is not one of the four areas of the performance efficiency pillar in the Well-Architected Framework? Select the best answer.",
+          "options": [
+            "Traceability",
+            "Monitoring",
+            "Selection",
+            "Tradeoffs"
+          ],
+          "explanation": "Traceability is a core design principle of the Security pillar, not the Performance Efficiency pillar which relies on Selection, Review, Monitoring, and Tradeoffs.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q157",
+          "text": "Which is not a characteristic of the Amazon EC2 Scaling service? Select the best answer.",
+          "options": [
+            "Responds to changing conditions by adding or terminating Amazon Elastic",
+            "Compute Cloud (Amazon EC2) instances",
+            "Sends traffic to healthy instances",
+            "Launches instances from a specified Amazon Machine Image (AMI)",
+            "Enforces a minimum number of running Amazon Elastic Compute Cloud (Amazon EC2) instances"
+          ],
+          "explanation": "Sending traffic to healthy instances is a primary function of Elastic Load Balancing (ELB), rather than a direct feature of the EC2 Auto Scaling service.",
+          "correctAnswer": 2
+        },
+        {
+          "id": "h_examprep_q158",
+          "text": "Which options will help increase the availability of a web server farm? Select two responses.",
+          "options": [
+            "Use Amazon CloudFront to deliver content to end users with low latency.",
+            "Deploy the instances in an Amazon Virtual Private Cloud (Amazon VPC).",
+            "Launch the web server instance across multiple Availability Zones.",
+            "Add more CPU and RAM to each instance.",
+            "Leverage Scaling to recover from failed instances."
+          ],
+          "explanation": "Deploying EC2 instances across multiple Availability Zones prevents single-point failure, while Auto Scaling automatically substitutes unhealthy nodes to keep the farm operational.",
+          "correctAnswers": [
+            2,
+            4
+          ]
+        },
+        {
+          "id": "h_examprep_q159",
+          "text": "Which design principles are recommended when considering performance efficiency? Select two responses.",
+          "options": [
+            "Utilize serverless architectures",
+            "Democratize advanced technologies",
+            "Promote expenditure awareness",
+            "Enable traceability",
+            "Match supply with demand"
+          ],
+          "explanation": "Performance efficiency design principles recommend utilizing serverless options to offload management overhead and democratizing complex technologies by consuming them as managed cloud services.",
+          "correctAnswers": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "h_examprep_q160",
+          "text": "Which AWS offering enables customers to find, buy, and immediately start using software solutions in their AWS environment? Select the best answer.",
+          "options": [
+            "AWS Marketplace",
+            "AWS Database Migration Service (AWS DMS)",
+            "AWS SDK",
+            "AWS Storage Gateway"
+          ],
+          "explanation": "AWS Marketplace is a digital catalog that allows organizations to find, test, purchase, and deploy third-party software and container services instantly.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q161",
+          "text": "In a physical data center, security is typically considered in what area? Select the best answer",
+          "options": [
+            "In an edge location",
+            "Only in the perimeter",
+            "In the closest availability zones",
+            "In the closest region"
+          ],
+          "explanation": "Traditional on-premises architecture primarily enforces security protections at the physical perimeter boundaries, making it difficult to scale internal logical access control vectors.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q162",
+          "text": "To view all categories of instance metadata from within a running instance, which URL should you use? Select the best answer",
+          "options": [
+            "https://196.245.196.245/latest/meta-data/",
+            "https://169.254.169.254/latest/meta-data/",
+            "https://245.196.245.196/latest/meta-data/",
+            "https://254.169.254.169/latest/meta-data/"
+          ],
+          "explanation": "AWS reserves the link-local unicast IP address 169.254.169.254 locally to allow active EC2 instances to safely fetch internal instance metadata strings.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q163",
+          "text": "What is defined as the ability for a system to remain operational even if some of the components of that system fail? Select the best answer.",
+          "options": [
+            "Fault tolerance",
+            "High availability",
+            "High durability",
+            "DNS failovers"
+          ],
+          "explanation": "Fault tolerance represents the infrastructure state where an environment can sustain a major component degradation without suffering application downtime.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q164",
+          "text": "Which best describes a system that is always available, without the need for human intervention? Select the best answer.",
+          "options": [
+            "Elastic",
+            "Fault tolerant",
+            "Highly available",
+            "Scalable"
+          ],
+          "explanation": "High availability systems maximize uptime service level agreements automatically by routing around isolated application node failures without needing operator intervention.",
+          "correctAnswer": 2
+        }
+      ]
+    },
+    {
+      "section": "Scaling",
+      "questions": [
+        {
+          "id": "h_examprep_q165",
+          "text": "Which of the following AWS tools help your application scale up or down based on demand? Select two responses.",
+          "options": [
+            "AWS CloudFormation",
+            "Elastic Load Balancing",
+            "Scaling",
+            "Auto Availability Zones",
+            "Agile Load Balancing"
+          ],
+          "explanation": "Auto Scaling dynamically adjusts EC2 capacity based on load metrics, while Elastic Load Balancing distributes traffic across those scaling instances.",
+          "correctAnswers": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "h_examprep_q166",
+          "text": "Which service would you use to send alerts based on Amazon CloudWatch alarms? Select the best answer.",
+          "options": [
+            "AWS Trusted Advisor",
+            "AWS CloudTrail",
+            "Amazon Route 53",
+            "Amazon Simple Notification Service (Amazon SNS)"
+          ],
+          "explanation": "Amazon SNS is a pub/sub messaging service used to send notifications (SMS, email) automatically triggered by CloudWatch alarms.",
+          "correctAnswer": 3
+        },
+        {
+          "id": "h_examprep_q167",
+          "text": "Which is not a characteristic of the Amazon EC2 Scaling service? Select the best answer.",
+          "options": [
+            "Responds to changing conditions by adding or terminating Amazon Elastic",
+            "Compute Cloud (Amazon EC2) instances",
+            "Enforces a minimum number of running Amazon Elastic Compute Cloud (Amazon EC2) instances",
+            "Launches instances from a specified Amazon Machine Image (AMI)",
+            "Sends traffic to healthy instances"
+          ],
+          "explanation": "Sending traffic to healthy instances is a core feature of Elastic Load Balancing (ELB), not the Amazon EC2 Auto Scaling service.",
+          "correctAnswer": 4
+        },
+        {
+          "id": "h_examprep_q168",
+          "text": "Which of the following must be configured on an Elastic Load Balancing load balancer to accept incoming traffic?",
+          "options": [
+            "A network interface",
+            "A listener",
+            "An instance",
+            "A port"
+          ],
+          "explanation": "A listener is a process that checks for connection requests using configured protocols and ports to route traffic to registered targets.",
+          "correctAnswer": 1
+        },
+        {
+          "id": "h_examprep_q169",
+          "text": "What are the minimum elements required to create an Auto Scaling launch configuration. Select three responses.",
+          "options": [
+            "Block device mapping",
+            "Amazon Machine Image (AMI)",
+            "Launch configuration name",
+            "Security group",
+            "Instance type"
+          ],
+          "explanation": "Creating an Auto Scaling launch configuration fundamentally requires an AMI choice, an instance type hardware footprint, and a template name string.",
+          "correctAnswers": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "id": "h_examprep_q170",
+          "text": "How long does Amazon CloudWatch keep metric data? Select the best answer.",
+          "options": [
+            "15 months",
+            "2 weeks",
+            "12 months",
+            "1 month"
+          ],
+          "explanation": "Amazon CloudWatch retains metric data parameters historically for up to 15 months on a rolling schedule for trend analysis.",
+          "correctAnswer": 0
+        },
+        {
+          "id": "h_examprep_q171",
+          "text": "Amazon CloudWatch supports which types of monitoring plans? Select two responses.",
+          "options": [
+            "Basic monitoring, which has an additional cost",
+            "Basic monitoring, which is free",
+            "Detailed monitoring, which is free",
+            "Ad hoc monitoring, which has an additional cost",
+            "Detailed monitoring, which has an additional cost"
+          ],
+          "explanation": "AWS offers standard basic monitoring for free at 5-minute intervals and detailed monitoring at an extra cost for 1-minute intervals.",
+          "correctAnswers": [
+            1,
+            4
+          ]
+        },
+        {
+          "id": "h_examprep_q172",
+          "text": "Which of the following is a type of Elastic Load Balancing health check? (Select THREE.)",
+          "options": [
+            "A ping",
+            "An Amazon Elastic Compute Cloud (Amazon EC2) instance status check.",
+            "A connection attempt",
+            "A page request",
+            "A key pair verification"
+          ],
+          "explanation": "ELB health checks evaluate target status actively using basic network level pings, connection attempts, or explicit web page requests.",
+          "correctAnswers": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "id": "h_examprep_q173",
+          "text": "What are the three types of load balancers that Amazon Elastic Load Balancing offers?",
+          "options": [
+            "Network Load Balancer",
+            "Internet Load Balancer",
+            "Classic Load Balancer",
+            "Scaling Load Balancer",
+            "Compute Load Balancer",
+            "Application Load Balancer"
+          ],
+          "explanation": "Amazon Elastic Load Balancing provides Application Load Balancers (Layer 7), Network Load Balancers (Layer 4), and legacy Classic Load Balancers.",
+          "correctAnswers": [
+            0,
+            2,
+            5
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,18 +1,31 @@
 import type { Question, QuizResult } from '../types';
 
 /**
- * Pure function to evaluate a user's answers against the question set.
+ * Evaluates user selections against both single-choice and multi-choice configurations.
  */
 export const evaluateQuiz = (
   questions: Question[], 
-  userAnswers: Record<string, number>
+  userAnswers: Record<string, number[]>
 ): QuizResult => {
   let score = 0;
   const wrongQuestions: string[] = [];
 
   questions.forEach(q => {
-    const userAnswer = userAnswers[q.id];
-    if (userAnswer === q.correctAnswer) {
+    const selectedIndices = userAnswers[q.id] || [];
+    
+    // Normalize target correct options into a single array format
+    const correctIndices = q.correctAnswers !== undefined 
+      ? q.correctAnswers 
+      : (q.correctAnswer !== undefined ? [q.correctAnswer] : []);
+
+    const sortedSelections = [...selectedIndices].sort((a, b) => a - b);
+    const sortedExpected = [...correctIndices].sort((a, b) => a - b);
+
+    const isCorrect = 
+      sortedSelections.length === sortedExpected.length &&
+      sortedSelections.every((val, index) => val === sortedExpected[index]);
+
+    if (isCorrect) {
       score += 1;
     } else {
       wrongQuestions.push(q.id);
@@ -20,7 +33,6 @@ export const evaluateQuiz = (
   });
 
   const total = questions.length;
-  // Prevent division by zero if an empty quiz is somehow evaluated
   const percentage = total > 0 ? Math.round((score / total) * 100) : 0;
 
   return {

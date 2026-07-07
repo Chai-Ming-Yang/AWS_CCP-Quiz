@@ -2,7 +2,8 @@ export interface Question {
   id: string;
   text: string;
   options: string[];
-  correctAnswer: number;
+  correctAnswer?: number;      // For single-choice legacy support
+  correctAnswers?: number[];   // For new multi-choice support
   explanation: string;
 }
 

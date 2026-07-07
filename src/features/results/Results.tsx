@@ -6,7 +6,7 @@ import type { QuizResult, Question } from '../../core/types';
 interface ResultsState {
   result: QuizResult;
   questions: Question[];
-  userAnswers: Record<string, number>;
+  userAnswers: Record<string, number[]>;
 }
 
 const Results: React.FC = () => {
@@ -23,7 +23,6 @@ const Results: React.FC = () => {
 
   return (
     <div className="max-w-4xl mx-auto space-y-6 animate-fadeIn">
-      {/* Score Banner */}
       <div className={`p-8 rounded-xl shadow-lg text-center border ${
         isPassing ? 'bg-emerald-950/30 border-emerald-900/50' : 'bg-red-950/30 border-red-900/50'
       }`}>
@@ -47,7 +46,6 @@ const Results: React.FC = () => {
         </div>
       </div>
 
-      {/* Action Controls */}
       <div className="flex justify-center">
         <button
           onClick={() => navigate('/')}
@@ -57,7 +55,6 @@ const Results: React.FC = () => {
         </button>
       </div>
 
-      {/* Detailed Review Section */}
       {wrongQuestionDetails.length > 0 && (
         <div className="mt-8">
           <h2 className="text-lg font-bold text-slate-100 mb-4 flex items-center gap-2">
@@ -65,10 +62,11 @@ const Results: React.FC = () => {
           </h2>
           <div className="space-y-4">
             {wrongQuestionDetails.map((q, index) => {
-              const userAnswerIndex = userAnswers[q.id];
-              const userAnswerText = userAnswerIndex !== undefined ? q.options[userAnswerIndex] : "No answer provided";
-              const correctAnswerText = q.options[q.correctAnswer];
-
+              const selected = userAnswers[q.id] || [];
+              const expected = q.correctAnswers !== undefined 
+                ? q.correctAnswers 
+                : (q.correctAnswer !== undefined ? [q.correctAnswer] : []);
+              
               return (
                 <div key={q.id} className="bg-slate-900 border border-slate-800 rounded-xl p-5 md:p-6 shadow-md">
                   <div className="flex items-start gap-4">
@@ -79,13 +77,19 @@ const Results: React.FC = () => {
                       <h3 className="text-base font-semibold text-slate-100">{q.text}</h3>
                       
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
-                        <div className="bg-red-950/20 border border-red-900/30 p-3 rounded-lg">
-                          <span className="block text-[10px] font-bold text-red-500 uppercase mb-1">Your Answer</span>
-                          <span className="text-red-200">{userAnswerText}</span>
+                        <div className="bg-red-950/20 border border-red-900/30 p-3 rounded-lg flex flex-col gap-1">
+                          <span className="block text-[10px] font-bold text-red-500 uppercase mb-1">Your Selections</span>
+                          {selected.length > 0 ? selected.map(idx => (
+                            <span key={idx} className="text-red-200 block">• {q.options[idx]}</span>
+                          )) : (
+                            <span className="text-red-400 italic block">No answers picked</span>
+                          )}
                         </div>
-                        <div className="bg-emerald-950/20 border border-emerald-900/30 p-3 rounded-lg">
-                          <span className="block text-[10px] font-bold text-emerald-500 uppercase mb-1">Correct Answer</span>
-                          <span className="text-emerald-200">{correctAnswerText}</span>
+                        <div className="bg-emerald-950/20 border border-emerald-900/30 p-3 rounded-lg flex flex-col gap-1">
+                          <span className="block text-[10px] font-bold text-emerald-500 uppercase mb-1">Target Solutions</span>
+                          {expected.map(idx => (
+                            <span key={idx} className="text-emerald-200 block">• {q.options[idx]}</span>
+                          ))}
                         </div>
                       </div>
 
