@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Layers, PlayCircle, ShieldCheck, ShieldAlert } from 'lucide-react';
+import { PlayCircle, ShieldCheck, ShieldAlert } from 'lucide-react';
 import rawData from '../../data/aws_questions.json';
 import type { QuizDatabase, QuestionGroup } from '../../core/types';
 
